@@ -12,6 +12,10 @@
                               <asp:TextBox ID="txt_SName" runat="server"></asp:TextBox>
                              <asp:Label ID="lbl_SImage" runat="server" Text="Seller Image"></asp:Label>
                               <asp:TextBox ID="txt_SImage" runat="server"></asp:TextBox>
+                            <asp:Label ID="lbl_SLoc" runat="server" Text="Seller Image"></asp:Label>
+                              <asp:TextBox ID="txt_SLoc" runat="server"></asp:TextBox>
+                            <asp:Label ID="lbl_SContact" runat="server" Text="Seller Image"></asp:Label>
+                              <asp:TextBox ID="txt_SContact" runat="server"></asp:TextBox>
                             </div>
                          </div>
                       </div>
