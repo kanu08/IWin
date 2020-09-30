@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace IWin
+namespace IWin.UI
 {
-    public partial class SiteMaster : MasterPage
+    public partial class ad_addstore : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // System.Threading.Thread.Sleep(3000);
+
         }
     }
 }

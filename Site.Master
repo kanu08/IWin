@@ -81,8 +81,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <footer>
-                <%--<p style="background-color:#F3F3F3">&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>--%>
-                <p >Copyright Reserved </p>
+                <p style="background-color:#000019; padding:8px;margin-bottom:0px;">&copy; <%: DateTime.Now.Year %> - IWin Application</p>
             </footer>
         </div>
  </form>

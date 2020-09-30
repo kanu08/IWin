@@ -20,7 +20,7 @@
 .navbar-inverse {
     background-color: #394814;
     border-color: #394814;
-    opacity:0.8;
+    opacity:0.9;
 }
 
     .navbar-inverse .navbar-nav > li > a {
@@ -97,6 +97,10 @@ ol {
     padding: 0px;
 }
 
+label {
+    font-weight:400;
+    color: black;
+}
 /*a,
 a:hover,
 a:focus {
@@ -315,7 +319,7 @@ header .navbar-default {
     -o-transition: all .5s ease-out 0s;
 }*/
 
-/*.right-nav {
+.right-nav {
     float: right;
     padding-right: 5px;
     width:220px;
@@ -332,7 +336,7 @@ header .navbar-default {
 .login-sr {
     float: right;
     margin-left: 15px;
-}*/
+}
 
 .login-signup {
     padding: 13px 0px;
@@ -477,7 +481,15 @@ header .navbar-default {
     background-size:cover;
     /*padding-bottom: 180px;*/
     background-position: center center;
-    height: 700px;
+    height: 735px;
+}
+.seller {
+    background-color: #90b433;
+    background-image: url('../images/shelf.jpg');
+    background-size: cover;
+    /*padding-bottom: 180px;*/
+    background-position: center center;
+    height: 735px;
 }
 /*css for container*/
 .container {
@@ -489,7 +501,7 @@ header .navbar-default {
 }
 /*css for search box div*/
 .find-box {
-    max-width: 780px;
+    max-width: 800px;
     margin: 0 auto;
     width: 100%;
     padding: 92px 0px 75px 0px;
@@ -647,3 +659,12 @@ header .navbar-default {
             color: #007dea;
         }
 
+.adminform {
+    border: 1px;
+    background-color: #D5D0D2;
+    border-radius: 25px;
+    height: 400px;
+    width: 800px;
+    opacity:0.9;
+    padding:8px;
+}
