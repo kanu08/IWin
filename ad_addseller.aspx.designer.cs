@@ -24,15 +24,6 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.Label lbl_SName;
 
         /// <summary>
-        /// txt_SName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SName;
-
-        /// <summary>
         /// lbl_SImage control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace IWin.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_SImage;
+
+        /// <summary>
+        /// txt_SName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_SName;
 
         /// <summary>
         /// txt_SImage control.
@@ -60,15 +60,6 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.Label lbl_SLoc;
 
         /// <summary>
-        /// txt_SLoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SLoc;
-
-        /// <summary>
         /// lbl_SContact control.
         /// </summary>
         /// <remarks>
@@ -78,6 +69,15 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.Label lbl_SContact;
 
         /// <summary>
+        /// txt_SLoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_SLoc;
+
+        /// <summary>
         /// txt_SContact control.
         /// </summary>
         /// <remarks>
@@ -85,5 +85,23 @@ namespace IWin.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_SContact;
+
+        /// <summary>
+        /// btn_saveSeller control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_saveSeller;
+
+        /// <summary>
+        /// btn_clearSeller control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_clearSeller;
     }
 }
