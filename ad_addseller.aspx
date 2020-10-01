@@ -9,25 +9,25 @@
             <div class="adminform">
                   <div class="row">
                         <div class="col-sm-3">
-                               <asp:Label ID="lbl_SName" runat="server" Text="Seller Name"></asp:Label><br /><br />
-                               <asp:Label ID="lbl_SImage" runat="server" Text="Seller Image"></asp:Label>
+                               <asp:Label ID="lblSName" runat="server" Text="Seller Name"></asp:Label><br /><br />
+                               <asp:Label ID="lblSImage" runat="server" Text="Seller Image"></asp:Label>
                          </div>
                         <div class="col-sm-3">
-                                <asp:TextBox ID="txt_SName" runat="server"></asp:TextBox>
-                                <asp:TextBox ID="txt_SImage" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSName" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSImage" runat="server"></asp:TextBox>
                          </div>
                         <div class="col-sm-3">
-                                <asp:Label ID="lbl_SLoc" runat="server" Text="Seller Location"></asp:Label><br /><br />
-                                <asp:Label ID="lbl_SContact" runat="server" Text="Seller Contact"></asp:Label>             
+                                <asp:Label ID="lblSLoc" runat="server" Text="Seller Location"></asp:Label><br /><br />
+                                <asp:Label ID="lblSContact" runat="server" Text="Seller Contact"></asp:Label>             
                         </div>
                         <div class="col-sm-3">
-                               <asp:TextBox ID="txt_SLoc" runat="server"></asp:TextBox>
-                               <asp:TextBox ID="txt_SContact" runat="server"></asp:TextBox>
+                               <asp:TextBox ID="txtSLoc" runat="server"></asp:TextBox>
+                               <asp:TextBox ID="txtSContact" runat="server"></asp:TextBox>
                         </div>
                       <div class="row"><br />
                           <div class="col-sm-12">
                               <div class="center">
-                              <asp:Button ID="btn_saveSeller" runat="server" Text="Save" />&nbsp&nbsp
+                              <asp:Button ID="btn_saveSeller" runat="server" Text="Save" OnClick="btn_saveSeller_Click" />&nbsp&nbsp
                               <asp:Button ID="btn_clearSeller" runat="server" Text="Clear" />
                                   </div>
                           </div>

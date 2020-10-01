@@ -15,76 +15,76 @@ namespace IWin.UI
     {
 
         /// <summary>
-        /// lbl_SName control.
+        /// lblSName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_SName;
+        protected global::System.Web.UI.WebControls.Label lblSName;
 
         /// <summary>
-        /// lbl_SImage control.
+        /// lblSImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_SImage;
+        protected global::System.Web.UI.WebControls.Label lblSImage;
 
         /// <summary>
-        /// txt_SName control.
+        /// txtSName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SName;
+        protected global::System.Web.UI.WebControls.TextBox txtSName;
 
         /// <summary>
-        /// txt_SImage control.
+        /// txtSImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SImage;
+        protected global::System.Web.UI.WebControls.TextBox txtSImage;
 
         /// <summary>
-        /// lbl_SLoc control.
+        /// lblSLoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_SLoc;
+        protected global::System.Web.UI.WebControls.Label lblSLoc;
 
         /// <summary>
-        /// lbl_SContact control.
+        /// lblSContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_SContact;
+        protected global::System.Web.UI.WebControls.Label lblSContact;
 
         /// <summary>
-        /// txt_SLoc control.
+        /// txtSLoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SLoc;
+        protected global::System.Web.UI.WebControls.TextBox txtSLoc;
 
         /// <summary>
-        /// txt_SContact control.
+        /// txtSContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_SContact;
+        protected global::System.Web.UI.WebControls.TextBox txtSContact;
 
         /// <summary>
         /// btn_saveSeller control.
