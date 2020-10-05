@@ -20,10 +20,8 @@
     </asp:PlaceHolder>--%>
 
     <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
-    <script>
-    </script>
 </head>
-    <body>
+   <body>
 <%--<body onload="setTimeout(myFunc, 4000)">
     <div id="loading" ><img src="images/racing.gif" /><h2>Heading straight to the farms for you</h2></div>--%>
     <form runat="server">
