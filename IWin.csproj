@@ -105,7 +105,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="AdminMenu.ascx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="images\admin.jpg" />
+    <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
     <Content Include="ad_addCat.aspx" />
     <Content Include="ad_addProduct.aspx" />
@@ -144,6 +147,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Admin.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\berries.jpg" />
     <Content Include="images\bg_main.jpg" />
@@ -188,14 +192,40 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="se_viewDemand.aspx" />
+    <Content Include="se_viewProd.aspx" />
+    <Content Include="se_viewReports.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ad_addSeller.aspx" />
+    <Content Include="UserMenu.ascx" />
+    <Content Include="us_bbfProd.aspx" />
+    <Content Include="us_beMember.aspx" />
+    <Content Include="us_newUser.aspx" />
+    <Content Include="us_registeration.aspx" />
+    <Content Include="us_rescuedProd.aspx" />
+    <Content Include="us_viewAdd.aspx" />
+    <Content Include="us_viewCart.aspx" />
+    <Content Include="us_viewProd.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.ascx.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.ascx.designer.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ad_addBrand.aspx.cs">
       <DependentUpon>ad_addBrand.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +246,13 @@
     </Compile>
     <Compile Include="ad_addProduct.aspx.designer.cs">
       <DependentUpon>ad_addProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="ad_addSubcat.aspx.cs">
       <DependentUpon>ad_addSubcat.aspx</DependentUpon>
@@ -281,12 +318,12 @@
       <DependentUpon>ad_updUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -307,10 +344,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="iwinBll.cs" />
-    <Compile Include="iwinBO.cs" />
-    <Compile Include="iwinDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="se_viewDemand.aspx.cs">
+      <DependentUpon>se_viewDemand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_viewDemand.aspx.designer.cs">
+      <DependentUpon>se_viewDemand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="se_viewProd.aspx.cs">
+      <DependentUpon>se_viewProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_viewProd.aspx.designer.cs">
+      <DependentUpon>se_viewProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="se_viewReports.aspx.cs">
+      <DependentUpon>se_viewReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_viewReports.aspx.designer.cs">
+      <DependentUpon>se_viewReports.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,6 +386,69 @@
     </Compile>
     <Compile Include="ad_addSeller.aspx.designer.cs">
       <DependentUpon>ad_addSeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.ascx.cs">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMenu.ascx.designer.cs">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="us_bbfProd.aspx.cs">
+      <DependentUpon>us_bbfProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_bbfProd.aspx.designer.cs">
+      <DependentUpon>us_bbfProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_beMember.aspx.cs">
+      <DependentUpon>us_beMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_beMember.aspx.designer.cs">
+      <DependentUpon>us_beMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_newUser.aspx.cs">
+      <DependentUpon>us_newUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_newUser.aspx.designer.cs">
+      <DependentUpon>us_newUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_registeration.aspx.cs">
+      <DependentUpon>us_registeration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_registeration.aspx.designer.cs">
+      <DependentUpon>us_registeration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_rescuedProd.aspx.cs">
+      <DependentUpon>us_rescuedProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_rescuedProd.aspx.designer.cs">
+      <DependentUpon>us_rescuedProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_viewAdd.aspx.cs">
+      <DependentUpon>us_viewAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_viewAdd.aspx.designer.cs">
+      <DependentUpon>us_viewAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_viewCart.aspx.cs">
+      <DependentUpon>us_viewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_viewCart.aspx.designer.cs">
+      <DependentUpon>us_viewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_viewProd.aspx.cs">
+      <DependentUpon>us_viewProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_viewProd.aspx.designer.cs">
+      <DependentUpon>us_viewProd.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -353,6 +471,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IWinBLL\IWinBLL.csproj">
+      <Project>{34103ee1-ba06-4981-859e-d8a36b1d64ed}</Project>
+      <Name>IWinBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IWinBO\IWinBO.csproj">
+      <Project>{c5bcf7a4-288d-43b1-9f42-816b853eb67e}</Project>
+      <Name>IWinBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IWinDAL\IWinDAL.csproj">
+      <Project>{fbf28f89-330a-45f5-ada9-c94e7888b397}</Project>
+      <Name>IWinDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

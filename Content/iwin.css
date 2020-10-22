@@ -488,6 +488,15 @@ header .navbar-default {
     background-position: center center;
     height: 735px;
 }
+.admin {
+    background-color: #90b433;
+    background-image: url('../images/admin.jpg');
+    background-size: cover;
+    /*padding-bottom: 180px;*/
+    background-position: center center;
+    height: 735px;
+}
+
 /*css for container*/
 .container {
     width:100%;

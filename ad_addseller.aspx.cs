@@ -8,6 +8,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using Microsoft.Ajax.Utilities;
+using IWinBO;
+using IWinBLL;
+
 
 namespace IWin.UI
 {
@@ -21,15 +24,19 @@ namespace IWin.UI
 
         protected void btn_saveSeller_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    iwinBO se = new iwinBO();
-            //    se.SellerName = txtSName.Text;
-            //    se.SellerImage = txtSImage.Text;
-            //    se.SellerLocation = txtSLoc.Text;
-            //    se.SellerContact = txtSContact.Text;
+            try
+            {
+                IWinBO.Seller se = new IWinBO.Seller();
+                se.SellerName = txtSName.Text;
+                se.SellerImage = txtSImage.Text;
+                se.SellerLocation = txtSLoc.Text;
+                se.SellerContact = txtSContact.Text;
 
-            //}
+            }
+            catch
+            {
+
+            }
         }
     }
 }

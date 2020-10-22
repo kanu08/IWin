@@ -1,5 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IWin.SiteMaster" %>
-<%@ Register TagPrefix="UC" TagName="userMenu" Src="UserMenu.ascx" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="IWin.Admin" %>
+<%@ Register TagPrefix="UC" TagName="adminMenu" Src="AdminMenu.ascx" %>
 
 <!DOCTYPE html>
 
@@ -56,16 +56,16 @@
                     <a class="navbar-brand" runat="server" href="~/UserHome.aspx">&nbsp IWin home</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <UC:userMenu ID="user1" runat="server"></UC:userMenu>
-                    <div class="right-nav"> 
-                        <ul class="sign">
+                    <UC:adminMenu ID="admin1" runat="server"></UC:adminMenu>
+                   <div class="right-nav"><ul class="sign"><li><a>Welcome Admin</a></li></ul> </div>
+                      <%--   <ul class="sign">
                             <li><a runat="server" href="~/us_registeration.aspx">New User</a></li>
                             <li><a runat="server" href="~/Sign.aspx?user_type=2">Already a User!</a></li>
                   </ul><div style="text-align: right;padding-right: 10px;" >
                         <a runat="server" href="~/Cart"><i class="fa" style="font-size:35px">&#xf07a;</i>
                               <span class='badge badge-warning' id='lblCartCount'>0</span>
                              </a></div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
         </div>
