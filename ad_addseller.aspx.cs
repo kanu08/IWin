@@ -29,8 +29,13 @@ namespace IWin.UI
                 IWinBO.Seller se = new IWinBO.Seller();
                 se.SellerName = txtSName.Text;
                 se.SellerImage = txtSImage.Text;
-                se.SellerLocation = txtSLoc.Text;
+                se.SellerProvince = Convert.ToInt32(txtSPro.Text);
+                se.SellerAddr = txtSAddr.Text;
+                se.SellerPin = Convert.ToInt32(txtSPin.Text);
                 se.SellerContact = txtSContact.Text;
+                se.OP = 1;  //represent an insert operation 
+
+
 
             }
             catch

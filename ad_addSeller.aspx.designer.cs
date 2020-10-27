@@ -33,6 +33,15 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.Label lblSImage;
 
         /// <summary>
+        /// lblSAddr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSAddr;
+
+        /// <summary>
         /// txtSName control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,22 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.TextBox txtSImage;
 
         /// <summary>
-        /// lblSLoc control.
+        /// txtSAddr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSLoc;
+        protected global::System.Web.UI.WebControls.TextBox txtSAddr;
+
+        /// <summary>
+        /// lblSPro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSPro;
 
         /// <summary>
         /// lblSContact control.
@@ -69,13 +87,22 @@ namespace IWin.UI
         protected global::System.Web.UI.WebControls.Label lblSContact;
 
         /// <summary>
-        /// txtSLoc control.
+        /// lblSPincode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSLoc;
+        protected global::System.Web.UI.WebControls.Label lblSPincode;
+
+        /// <summary>
+        /// txtSPro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSPro;
 
         /// <summary>
         /// txtSContact control.
@@ -85,6 +112,15 @@ namespace IWin.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSContact;
+
+        /// <summary>
+        /// txtSPin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSPin;
 
         /// <summary>
         /// btn_saveSeller control.
