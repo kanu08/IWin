@@ -42,6 +42,15 @@ namespace IWin
         protected global::System.Web.UI.WebControls.TextBox txtUName;
 
         /// <summary>
+        /// rfv_txtUName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtUName;
+
+        /// <summary>
         /// txtUNum control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,24 @@ namespace IWin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUNum;
+
+        /// <summary>
+        /// rfv_txtUNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtUNum;
+
+        /// <summary>
+        /// rev_txtUNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_txtUNum;
 
         /// <summary>
         /// lblUEmail control.
@@ -78,6 +105,24 @@ namespace IWin
         protected global::System.Web.UI.WebControls.TextBox txtUEmail;
 
         /// <summary>
+        /// rfv_txtUEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtUEmail;
+
+        /// <summary>
+        /// rev_txtUEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_txtUEmail;
+
+        /// <summary>
         /// txtUPassword control.
         /// </summary>
         /// <remarks>
@@ -85,6 +130,15 @@ namespace IWin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUPassword;
+
+        /// <summary>
+        /// rfv_txtUPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtUPassword;
 
         /// <summary>
         /// btn_saveUser control.
@@ -103,5 +157,14 @@ namespace IWin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_clearUser;
+
+        /// <summary>
+        /// lblmessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmessage;
     }
 }

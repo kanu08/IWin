@@ -16,7 +16,7 @@ namespace IWin.UI
 {
     public partial class ad_addstore : System.Web.UI.Page
     {
-
+        int Result = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,6 +24,7 @@ namespace IWin.UI
 
         protected void btn_saveSeller_Click(object sender, EventArgs e)
         {
+            //Session["name"]=
             try
             {
                 IWinBO.Seller se = new IWinBO.Seller();
@@ -34,8 +35,13 @@ namespace IWin.UI
                 se.SellerPin = Convert.ToInt32(txtSPin.Text);
                 se.SellerContact = txtSContact.Text;
                 se.OP = 1;  //represent an insert operation 
-
-
+                IWinBLL.Seller obj = new IWinBLL.Seller();
+                Result = obj.insertSeller(se);
+                if (Result == 2)
+                {
+                    lblmessage.Text = "<span class='glyphicon glyphicon-ok'></span>"+"Seller added successfully";
+                    lblmessage.Visible = true;
+                }
 
             }
             catch

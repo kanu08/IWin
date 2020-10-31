@@ -33,7 +33,13 @@
                               <div class="center">
                               <asp:Button ID="btn_saveSeller" runat="server" Text="Save" OnClick="btn_saveSeller_Click" />&nbsp&nbsp
                               <asp:Button ID="btn_clearSeller" runat="server" Text="Clear" />
-                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-12">
+                              <div class="center">
+                              <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
+                              </asp:Label>
+                              </div>
                           </div>
                       </div>
                      </div>

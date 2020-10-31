@@ -108,6 +108,7 @@
     <Content Include="AdminMenu.ascx" />
     <Content Include="AdminHome.aspx" />
     <Content Include="images\admin.jpg" />
+    <Content Include="images\pick.jpg" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
     <Content Include="ad_addCat.aspx" />
@@ -200,6 +201,7 @@
     <Content Include="UserMenu.ascx" />
     <Content Include="us_bbfProd.aspx" />
     <Content Include="us_beMember.aspx" />
+    <Content Include="us_login.aspx" />
     <Content Include="us_newUser.aspx" />
     <Content Include="us_registeration.aspx" />
     <Content Include="us_rescuedProd.aspx" />
@@ -406,6 +408,13 @@
     </Compile>
     <Compile Include="us_beMember.aspx.designer.cs">
       <DependentUpon>us_beMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_login.aspx.cs">
+      <DependentUpon>us_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_login.aspx.designer.cs">
+      <DependentUpon>us_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_newUser.aspx.cs">
       <DependentUpon>us_newUser.aspx</DependentUpon>

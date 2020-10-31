@@ -1,0 +1,71 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using IWinBO;
+
+namespace IWinDAL
+{
+    public class Buyer
+    {
+        int Result = 0;
+        dbUtil objcon = new dbUtil();
+        DataSet dt = new DataSet();
+        public int insBuyer(IWinBO.Buyer obj)
+        {
+            int res = 0;
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@UName", obj.Name } ,
+                    { "@UContact", obj.Contact },
+                    { "@UEmail", obj.Email },
+                    { "@UPassword", obj.Password },
+                    { "@OP", obj.OP.ToString() }
+                };
+                objcon.ExecuteSP("sp_user_Buyer", out res, arraySell);
+                Result = res;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
+        public int loginBuyer(IWinBO.Buyer obj)
+        {
+            List<string> hh2 = new List<string>();
+            try
+            {
+                string[,] arraylog = new string[,]
+                {
+                    { "@UEmail", obj.Email } ,
+                    { "@OP", obj.OP.ToString() }
+                };
+                objcon.ExecuteSP("sp_user_Buyer", out hh2, arraylog);
+                string dbhash = hh2[0];
+                //string dbsalt = dt1.Columns[1].ToString();
+                //if (obj.Password)
+                //{
+                //    Result = 1;
+                //}
+                //else
+                //{
+                //    Result = 2;
+                //}
+                return 1;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
+    }
+}

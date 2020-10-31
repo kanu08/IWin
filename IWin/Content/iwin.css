@@ -376,6 +376,11 @@ header .navbar-default {
                         background: #1d99ff;
                     }
 
+.lblsuccess {
+    color: darkgreen;
+    font-family: cursive;
+    font-weight: bolder;
+}
 /*.help-r {
     float: right;
 }
@@ -419,7 +424,6 @@ header .navbar-default {
                 .help-box ul li a .h-i {
                     padding-right: 10px;
                 }*/
-
 .fixed-menu {
     position: fixed;
     width: 100%;
@@ -483,6 +487,15 @@ header .navbar-default {
 .seller {
     background-color: #90b433;
     background-image: url('../images/shelf.jpg');
+    background-size: cover;
+    /*padding-bottom: 180px;*/
+    background-position: center center;
+    height: 735px;
+}
+
+.login-form {
+    background-color: #90b433;
+    background-image: url('../images/pick.jpg');
     background-size: cover;
     /*padding-bottom: 180px;*/
     background-position: center center;
@@ -669,15 +682,15 @@ header .navbar-default {
     border: 1px;
     background-color: #D5D0D2;
     border-radius: 25px;
-    height: 400px;
+    height: 350px;
     width: 820px;
     opacity:0.9;
     padding:20px;
     box-shadow: #808080 5px 5px inherit;
 }
 /*vertical spacing in elements in admin form*/
-.adminform input[type=text],input[type=checkbox],input[type=button]{
-    margin-bottom:13px;
+.adminform input[type=text],input[type=checkbox],input[type=button],input[type=email], input[type=password]{
+    margin-bottom: 9px;
     vertical-align:text-top;
     -webkit-box-align:baseline;
 }
@@ -708,4 +721,39 @@ label {
     font-weight: 500;
     font-size: 14px;
     color: black;
+}
+.loginbox {
+    border: 1px;
+    background-color: #D5D0D2;
+    border-radius: 25px;
+    height: 280px;
+    width: 360px;
+    opacity: 0.9;
+    padding: 20px;
+    box-shadow: #808080 5px 5px inherit;
+}
+    /*vertical spacing in elements in login form*/
+    .loginbox input[type=text], input[type=checkbox], input[type=button], input[type=email], input[type=password] {
+        margin-bottom:5px;
+        vertical-align: text-top;
+        -webkit-box-align: baseline;
+    }
+
+    .loginbox input[type=submit] {
+        width: 100px;
+        height: 40px;
+        background-color: #a0a0a0;
+        border-radius: 20px;
+        border: 2px solid black;
+        font-weight: 600;
+        color: black;
+    }
+
+        .loginbox input[type=submit]:hover {
+            color: #fff;
+            background-color: #2e2e2e;
+        }
+
+.loginbox label {
+    margin-bottom: 15px;
 }
