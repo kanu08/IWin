@@ -26,7 +26,8 @@ namespace IWinBLL
             try
             {
                 IWinDAL.Buyer objDA = new IWinDAL.Buyer();
-                return objDA.loginBuyer(obj);
+                int verify= blUtil.Verifypassword(obj.Password,objDA.loginBuyer(obj));
+                return verify;
             }
             catch (Exception ex)
             {
