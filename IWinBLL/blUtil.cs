@@ -58,5 +58,20 @@ namespace IWinBLL
             }
             return role;
         }
+
+        public static string getEmail(string nu)
+        {
+            string reEmail = null;
+            try
+            {
+                IWinDAL.dbUtil d1 = new IWinDAL.dbUtil();
+                d1.ExecuteSPem(out reEmail, nu);
+            }
+            catch
+            {
+
+            }
+            return reEmail;
+        }
     }
 }

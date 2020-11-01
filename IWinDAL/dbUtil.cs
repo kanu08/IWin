@@ -217,6 +217,37 @@ namespace IWinDAL
                 }
             }
         }
+        public void ExecuteSPem([Optional] out string reEmail, [Optional] string nu)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    con.Open();
+                    command.CommandType = CommandType.StoredProcedure;
+                    string result = null;
+                    command.CommandText = "sp_user_Buyer";
+                    command.CommandTimeout = 300;
+                    try
+                    {
+                        command.Parameters.Add(new SqlParameter("@UContact", nu));
+                        command.Parameters.Add(new SqlParameter("@OP", 4));
+                    }
+                    catch (Exception ex)
+                    {
+                        //ErrHandler.WriteError(ex.ToString());
+                        throw ex;
+                    }
+                    command.Connection = con;
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    result = reader["Email"].ToString();
+                    con.Close();
+                    reEmail = result;
+                }
+            }
+        }
         public void ExecuteSP(string StoredProcedureName, out List<string> ds, [Optional] string[,] aryParameters)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
