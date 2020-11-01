@@ -2,6 +2,7 @@
 	CUSTOM CSS
 -------------------------------------------------------------*/
 /*css for preloader*/
+
 #loading {
     background: #B3C675 url('../images/racing.gif') center;
     position: fixed;
@@ -14,6 +15,10 @@
 
 .sign{
     padding-top:4px;
+}
+
+#username{
+    color:white;
 }
 
 /*topbar css*/
@@ -47,6 +52,7 @@
 }
 .fa {
     color: #9bbb47;
+    margin-top:6px;
 }
 
 .label-warning[href],
@@ -58,7 +64,7 @@
     font-size: 15px;
     background: #1d334d;
     color: #fff;
-    padding: 0 5px;
+    padding: 4px 5px;
     vertical-align: top;
     margin-left: -10px;
 }
@@ -318,8 +324,8 @@ header .navbar-default {
 
 .right-nav {
     float: right;
-    padding-right: 5px;
-    width:220px;
+    padding-right: 50px;
+    width:280px;
 }
 
 .right-nav ul li{

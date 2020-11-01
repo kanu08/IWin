@@ -16,7 +16,6 @@ namespace IWinDAL
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["iwinConn"].ToString());
         int result;
-        string val;
         public DataSet GetDataSetForSP(SqlCommand command)
         {
             DataSet ds = new DataSet();
@@ -187,6 +186,37 @@ namespace IWinDAL
                 }
             }
         }
+        public void ExecuteSProle([Optional] out int role, [Optional] string em)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    con.Open();
+                    command.CommandType = CommandType.StoredProcedure;
+                    int result = 0;
+                    command.CommandText = "sp_user_Buyer";
+                    command.CommandTimeout = 300;
+                    try
+                    {
+                        command.Parameters.Add(new SqlParameter("@UEmail", em));
+                        command.Parameters.Add(new SqlParameter("@OP", 3));
+                    }
+                    catch (Exception ex)
+                    {
+                        //ErrHandler.WriteError(ex.ToString());
+                        throw ex;
+                    }
+                    command.Connection = con;
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    result = Convert.ToInt32(reader["RoleId"]);
+                    con.Close();
+                    role = result;
+                }
+            }
+        }
         public void ExecuteSP(string StoredProcedureName, out List<string> ds, [Optional] string[,] aryParameters)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -198,7 +228,7 @@ namespace IWinDAL
                     command.CommandType = CommandType.StoredProcedure;
                     List<string> hh = new List<string>();
                     //SqlDataAdapter adp = new SqlDataAdapter();
-                    DataSet ds2 = new DataSet();
+                    DataTable dtemp = new DataTable();
                     command.CommandText = StoredProcedureName;
                     command.CommandTimeout = 300;
                     try
@@ -215,15 +245,20 @@ namespace IWinDAL
                     }
                     command.Connection = con;
                     SqlDataReader reader = command.ExecuteReader();
+                    
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            hh.Add(reader.GetString(0));
+                            
+                                hh.Add(reader.GetString(0));
+                                hh.Add(reader.GetString(1));
+                            
                         }
                     }
-                    reader.Close();
+                    
                     ds = hh;
+                    reader.Close();
                     con.Close();
                 }
             }

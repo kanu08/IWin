@@ -37,7 +37,7 @@ namespace IWinDAL
             }
             return Result;
         }
-        public int loginBuyer(IWinBO.Buyer obj)
+        public List<string> loginBuyer(IWinBO.Buyer obj)
         {
             List<string> hh2 = new List<string>();
             try
@@ -48,24 +48,15 @@ namespace IWinDAL
                     { "@OP", obj.OP.ToString() }
                 };
                 objcon.ExecuteSP("sp_user_Buyer", out hh2, arraylog);
-                string dbhash = hh2[0];
-                //string dbsalt = dt1.Columns[1].ToString();
-                //if (obj.Password)
-                //{
-                //    Result = 1;
-                //}
-                //else
-                //{
-                //    Result = 2;
-                //}
-                return 1;
+                //string dbhash = hh2[0];
+                //string dbsalt = hh2[1];
             }
             catch (Exception e)
             {
                 //ErrHandler.WriteError(e.ToString());
                 throw e;
             }
-            return Result;
+            return hh2;
         }
     }
 }

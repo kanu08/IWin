@@ -8,15 +8,15 @@
                                <asp:Label ID="lblUName" runat="server" Text="UserName"></asp:Label><br /><br />
                                <asp:Label ID="lblUPass" runat="server" Text="Password"></asp:Label>
                          </div>
-                         <div class="col-sm-5">
+                         <div class="col-sm-6">
                               <asp:TextBox ID="txtUName" runat="server" placeholder="enter email or contact"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="rfv_txtUName" runat="server" ErrorMessage="*please enter username" ControlToValidate="txtUName" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginPs"></asp:RequiredFieldValidator>
                               <asp:TextBox ID="txtUPassword" runat="server" TextMode="Password" ></asp:TextBox>
                               <asp:RequiredFieldValidator ID="rfv_txtUPassword" runat="server" ErrorMessage="*please enter password" ControlToValidate="txtUPassword" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginPs"></asp:RequiredFieldValidator>
-                     <br /><br /><asp:Button ID="btn_loginPsd" runat="server" Text="Login" ValidationGroup="loginPs" OnClick="btn_loginPs_Click"/>
-                              <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
+                     <br /><br /><asp:Button ID="btn_loginPsd" runat="server" Text="Login" ValidationGroup="loginPs" OnClick="btn_loginPs_Click"/>   
+                        </div><br /><br /><br /><br /><br /><br /><br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
                               </asp:Label>
-                        </div>
             </div>
             <div class="loginbox" style="float:right;">
                          <div class="col-sm-5">

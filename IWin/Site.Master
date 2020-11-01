@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IWin.SiteMaster" %>
 <%@ Register TagPrefix="UC" TagName="userMenu" Src="UserMenu.ascx" %>
+<%@ Register TagPrefix="UC1" TagName="adminMenu" Src="AdminMenu.ascx" %>
 
 <!DOCTYPE html>
 
@@ -56,19 +57,28 @@
                     <a class="navbar-brand" runat="server" href="~/UserHome.aspx">&nbsp IWin home</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <UC:userMenu ID="user1" runat="server"></UC:userMenu>
-                    <div class="right-nav"> 
+        <div id="loggedUser" runat="server" visible="false" ><UC:userMenu ID="user1" runat="server"></UC:userMenu></div>
+        <div id="loggedAdmin" runat="server" visible="false"><UC1:adminMenu ID="user2" runat="server"></UC1:adminMenu></div>
+                    <div id="withoutLogin" class="right-nav" runat="server"> 
                         <ul class="sign">
                             <li><a runat="server" href="~/us_registeration.aspx">New User</a></li>
-                            <li><a runat="server" href="~/Sign.aspx?user_type=2">Already a User!</a></li>
-                  </ul><div style="text-align: right;padding-right: 10px;" >
+                            <li><a runat="server" href="~/us_login.aspx">Already a User!</a></li>
+                        </ul></div>
+                    <div id="withLogin" class="right-nav" runat="server" visible="false">
+                        <div class="sign" >
+                            <a runat="server" href="~/profile" style="color:#FFFFFF;font-size:inherit" title="click to see profile">Welcome&nbsp&nbsp
+                                <label id="username" runat="server" ></label>
+                                </a>&nbsp&nbsp<button id="logout" onserverclick="btn_logOut_Click" title="click to logout" style="background-color:#638212" runat="server">
+                                    <span class="glyphicon glyphicon-off" aria-hidden="true" style="color:#FFFFFF;" ></span></button>
+                        </div>
+                    </div>
+                        <div style="text-align: right;padding-right: 20px;padding-left:1300px" >
                         <a runat="server" href="~/Cart"><i class="fa" style="font-size:35px">&#xf07a;</i>
                               <span class='badge badge-warning' id='lblCartCount'>0</span>
-                             </a></div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
+        </div></div>
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
