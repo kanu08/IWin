@@ -24,13 +24,17 @@
                                <asp:Label ID="lblOtp" runat="server" Text="OTP"></asp:Label>
                              </div>
                    <div class="col-sm-7">
-                             <asp:TextBox ID="txtUNum" runat="server" placeholder="enter contact"></asp:TextBox><a>send OTP</a>
+                             <asp:TextBox ID="txtUNum" runat="server" placeholder="enter contact"></asp:TextBox>
+                       <a href="#" onserverclick="btn_sendOtp" runat="server">send OTP</a>
                        <asp:RequiredFieldValidator ID="rfv_txtUNum" runat="server" ErrorMessage="*please enter contact" ControlToValidate="txtUNum" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt"></asp:RequiredFieldValidator>
                        <asp:RegularExpressionValidator ID="rev_txtUNum" runat="server" ErrorMessage="*enter valid number" ControlToValidate="txtUNum" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt" ValidationExpression="^[789]\d{9}$"></asp:RegularExpressionValidator>       
                        <asp:TextBox ID="txtOtp" runat="server" placeholder="check your msgs"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="rfv_txtOtp" runat="server" ErrorMessage="*please enter otp" ControlToValidate="txtUPassword" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt"></asp:RequiredFieldValidator>
-                    <br /><br /><asp:Button ID="btn_loginOtp" runat="server" Text="Login" ValidationGroup="loginOt"/>   
+                    <br /><br /><asp:Button ID="btn_loginOtp" runat="server" Text="Login" ValidationGroup="loginOt" OnClick="btn_verifyOtp"/>   
                    </div>
+                <br /><br /><br /><br /><br /><br /><br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <asp:Label class="lblsuccess" ID="lblOtpmsg" runat="server" Text="" Visible="false">
+                              </asp:Label>
                </div>
         </div></div>
 </asp:Content>
