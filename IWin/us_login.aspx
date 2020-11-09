@@ -29,7 +29,7 @@
                        <asp:RequiredFieldValidator ID="rfv_txtUNum" runat="server" ErrorMessage="*please enter contact" ControlToValidate="txtUNum" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt"></asp:RequiredFieldValidator>
                        <asp:RegularExpressionValidator ID="rev_txtUNum" runat="server" ErrorMessage="*enter valid number" ControlToValidate="txtUNum" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt" ValidationExpression="^[789]\d{9}$"></asp:RegularExpressionValidator>       
                        <asp:TextBox ID="txtOtp" runat="server" placeholder="check your msgs"></asp:TextBox>
-                              <asp:RequiredFieldValidator ID="rfv_txtOtp" runat="server" ErrorMessage="*please enter otp" ControlToValidate="txtUPassword" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt"></asp:RequiredFieldValidator>
+                              <asp:RequiredFieldValidator ID="rfv_txtOtp" runat="server" ErrorMessage="*please enter otp" ControlToValidate="txtOtp" Display="Dynamic" ForeColor="#CC0000" Font-Size="XX-Small" SetFocusOnError="True" ValidationGroup="loginOt"></asp:RequiredFieldValidator>
                     <br /><br /><asp:Button ID="btn_loginOtp" runat="server" Text="Login" ValidationGroup="loginOt" OnClick="btn_verifyOtp"/>   
                    </div>
                 <br /><br /><br /><br /><br /><br /><br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
