@@ -11,7 +11,7 @@ namespace IWin
 {
 
 
-    public partial class us_newUser
+    public partial class ad_MgBuySell
     {
     }
 }

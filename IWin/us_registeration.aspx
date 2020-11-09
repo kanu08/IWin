@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="us_registeration.aspx.cs" Inherits="IWin.us_registeration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="seller">
+    <div class="seller">
     <div class="container">
-   <div class="row clearfix">
-   <div class="find-box"><br />
+    <div class="row clearfix">
+    <div class="find-box"><br />
         <h1>Registeration for new user</h1>
                       <br />
             <div class="adminform">

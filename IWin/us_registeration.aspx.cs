@@ -37,12 +37,21 @@ namespace IWin
                 {
                     lblmessage.Text = "<span class='glyphicon glyphicon-ok'></span>" + "User added successfully";
                     lblmessage.Visible = true;
+                    Clear();
                 }
             }
             catch
             {
 
             }
+        }
+
+        protected void Clear()
+        {
+            txtUName.Text = "";
+            txtUEmail.Text = "";
+            txtUNum.Text = "";
+            txtUPassword.Text = "";
         }
     }
 }

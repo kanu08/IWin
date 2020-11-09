@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace IWin
 {
-    public partial class Admin : System.Web.UI.MasterPage
+    public partial class ad_mngCat : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

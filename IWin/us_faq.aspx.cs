@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace IWin
 {
-    public partial class us_newUser : System.Web.UI.Page
+    public partial class us_faq : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -107,6 +107,8 @@
   <ItemGroup>
     <Content Include="AdminMenu.ascx" />
     <Content Include="AdminHome.aspx" />
+    <Content Include="ad_MgBuySell.aspx" />
+    <Content Include="ad_MgCat.aspx" />
     <Content Include="images\admin.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="UserHome.aspx" />
@@ -148,7 +150,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Admin.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="images\berries.jpg" />
     <Content Include="images\bg_main.jpg" />
@@ -201,8 +202,8 @@
     <Content Include="UserMenu.ascx" />
     <Content Include="us_bbfProd.aspx" />
     <Content Include="us_beMember.aspx" />
+    <Content Include="us_faq.aspx" />
     <Content Include="us_login.aspx" />
-    <Content Include="us_newUser.aspx" />
     <Content Include="us_registeration.aspx" />
     <Content Include="us_rescuedProd.aspx" />
     <Content Include="us_viewAdd.aspx" />
@@ -214,13 +215,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.Master.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.Master.designer.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
     <Compile Include="AdminMenu.ascx.cs">
       <DependentUpon>AdminMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,6 +263,20 @@
     </Compile>
     <Compile Include="ad_addUser.aspx.designer.cs">
       <DependentUpon>ad_addUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad_MgBuySell.aspx.cs">
+      <DependentUpon>ad_MgBuySell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad_MgBuySell.aspx.designer.cs">
+      <DependentUpon>ad_MgBuySell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ad_MgCat.aspx.cs">
+      <DependentUpon>ad_MgCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad_MgCat.aspx.designer.cs">
+      <DependentUpon>ad_MgCat.aspx</DependentUpon>
     </Compile>
     <Compile Include="ad_Reports.aspx.cs">
       <DependentUpon>ad_Reports.aspx</DependentUpon>
@@ -409,19 +417,19 @@
     <Compile Include="us_beMember.aspx.designer.cs">
       <DependentUpon>us_beMember.aspx</DependentUpon>
     </Compile>
+    <Compile Include="us_faq.aspx.cs">
+      <DependentUpon>us_faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_faq.aspx.designer.cs">
+      <DependentUpon>us_faq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="us_login.aspx.cs">
       <DependentUpon>us_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="us_login.aspx.designer.cs">
       <DependentUpon>us_login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="us_newUser.aspx.cs">
-      <DependentUpon>us_newUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="us_newUser.aspx.designer.cs">
-      <DependentUpon>us_newUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_registeration.aspx.cs">
       <DependentUpon>us_registeration.aspx</DependentUpon>
