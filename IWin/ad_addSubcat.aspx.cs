@@ -13,5 +13,21 @@ namespace IWin
         {
 
         }
+        protected void btn_saveSubCat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        protected void Clear()
+        {
+
+        }
     }
 }

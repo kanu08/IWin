@@ -1,8 +1,30 @@
 ﻿/*------------------------------------------------------------- 
 	CUSTOM CSS
 -------------------------------------------------------------*/
-/*css for preloader*/
+#sidebar-wrapper{
+    margin-top:200px;
+    margin-left:80px;
+    float:left;
+    width:25%;
+}
 
+
+
+.Question {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    /*text-decoration: underline;*/
+}
+
+.Answer{
+    font-size:14px;
+    font-weight:500;
+    color:antiquewhite;
+}
+
+/*css for preloader*/
 #loading {
     background: #B3C675 url('../images/racing.gif') center;
     position: fixed;
