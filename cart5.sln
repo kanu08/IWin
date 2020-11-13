@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "cart5", ".", "{5DFEAA68-F099-4A7A-8382-5432C4A3656D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53597"
+		Debug.AspNetCompiler.PhysicalPath = "..\cart5\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53597\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53597"
+		Release.AspNetCompiler.PhysicalPath = "..\cart5\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53597\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53597"
+		SlnRelativePath = "..\cart5\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DFEAA68-F099-4A7A-8382-5432C4A3656D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFEAA68-F099-4A7A-8382-5432C4A3656D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E473DC7-65BD-422C-87C8-172BFE61BDEB}
+	EndGlobalSection
+EndGlobal
