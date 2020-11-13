@@ -111,6 +111,7 @@
     <Content Include="ad_MgCat.aspx" />
     <Content Include="images\admin.jpg" />
     <Content Include="images\pick.jpg" />
+    <Content Include="mainProdview.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
     <Content Include="ad_addCat.aspx" />
@@ -328,6 +329,13 @@
       <DependentUpon>ad_updUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="mainProdview.aspx.cs">
+      <DependentUpon>mainProdview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mainProdview.aspx.designer.cs">
+      <DependentUpon>mainProdview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserHome.aspx.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
