@@ -8,4 +8,3 @@ C:\Users\kanup\source\repos\IWin\IWinBO\bin\Debug\IWinBO.pdb
 C:\Users\kanup\source\repos\IWin\IWinBO\obj\Debug\IWinBO.csproj.CoreCompileInputs.cache
 C:\Users\kanup\source\repos\IWin\IWinBO\obj\Debug\IWinBO.dll
 C:\Users\kanup\source\repos\IWin\IWinBO\obj\Debug\IWinBO.pdb
-C:\Users\kanup\source\repos\IWin\IWinBO\obj\Debug\IWinBO.csprojAssemblyReference.cache

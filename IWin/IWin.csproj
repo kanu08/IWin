@@ -110,6 +110,8 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="ad_MgBuySell.aspx" />
     <Content Include="ad_MgCat.aspx" />
+    <Content Include="email.aspx" />
+    <Content Include="images\addtocart.jpg" />
     <Content Include="images\admin.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="mainProdview.aspx" />
@@ -204,6 +206,7 @@
     <Content Include="UserMenu.ascx" />
     <Content Include="us_bbfProd.aspx" />
     <Content Include="us_beMember.aspx" />
+    <Content Include="us_emailVerify.aspx" />
     <Content Include="us_faq.aspx" />
     <Content Include="us_login.aspx" />
     <Content Include="us_registeration.aspx" />
@@ -337,6 +340,13 @@
       <DependentUpon>ad_updUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="email.aspx.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="email.aspx.designer.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mainProdview.aspx.cs">
       <DependentUpon>mainProdview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -432,6 +442,13 @@
     </Compile>
     <Compile Include="us_beMember.aspx.designer.cs">
       <DependentUpon>us_beMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_emailVerify.aspx.cs">
+      <DependentUpon>us_emailVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_emailVerify.aspx.designer.cs">
+      <DependentUpon>us_emailVerify.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_faq.aspx.cs">
       <DependentUpon>us_faq.aspx</DependentUpon>

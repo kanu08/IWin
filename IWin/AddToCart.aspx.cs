@@ -20,9 +20,9 @@ namespace IWin
                 DataRow dr;
                 dt.Columns.Add("sno");
                 dt.Columns.Add("product_id");
-                dt.Columns.Add("product_Name");
+                dt.Columns.Add("Name");
                 dt.Columns.Add("quantity");
-                dt.Columns.Add("product_price");
+                dt.Columns.Add("price");
                 dt.Columns.Add("totalprice");
 
 
@@ -44,10 +44,10 @@ namespace IWin
                         da.Fill(ds);
                         dr["sno"] = 1;
                         dr["product_id"] = ds.Tables[0].Rows[0]["product_id"].ToString();
-                        dr["product_Name"] = ds.Tables[0].Rows[0]["product_Name"].ToString();
+                        dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
                         dr["quantity"] = Request.QueryString["quantity"];
-                        dr["product_price"] = ds.Tables[0].Rows[0]["product_price"].ToString();
-                        int price = Convert.ToInt32(ds.Tables[0].Rows[0]["product_price"]);
+                        dr["price"] = ds.Tables[0].Rows[0]["price"].ToString();
+                        int price = Convert.ToInt32(ds.Tables[0].Rows[0]["price"]);
                         int quantity = Convert.ToInt32(Request.QueryString["quantity"]);
                         int totalprice = price * quantity;
                         dr["totalprice"] = totalprice;
@@ -82,10 +82,10 @@ namespace IWin
                         da.Fill(ds);
                         dr["sno"] = 1;
                         dr["product_id"] = ds.Tables[0].Rows[0]["product_id"].ToString();
-                        dr["product_Name"] = ds.Tables[0].Rows[0]["product_Name"].ToString();
+                        dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
                         dr["quantity"] = Request.QueryString["quantity"];
-                        dr["product_price"] = ds.Tables[0].Rows[0]["product_price"].ToString();
-                        int price = Convert.ToInt16(ds.Tables[0].Rows[0]["product_price"]);
+                        dr["price"] = ds.Tables[0].Rows[0]["price"].ToString();
+                        int price = Convert.ToInt16(ds.Tables[0].Rows[0]["price"]);
                         int quantity = Convert.ToInt16(Request.QueryString["quantity"]);
                         int totalprice = price * quantity;
                         dr["totalprice"] = totalprice;
