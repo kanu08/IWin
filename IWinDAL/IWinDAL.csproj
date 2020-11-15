@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buyer.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="dbUtil.cs" />
     <Compile Include="iwinDal.cs" />
