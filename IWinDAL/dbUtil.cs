@@ -344,6 +344,12 @@ namespace IWinDAL
                 case "ddlPin":
                     n = 3;
                     break;
+                case "ddlSubCategory":
+                    n = 4;
+                    break;
+                case "ddlBrand":
+                    n = 5;
+                    break;
                 default:
                     n = 0;
                     break;
