@@ -37,6 +37,7 @@
 
 .sign{
     padding-top:4px;
+    width:260px;
 }
 
 #username{
@@ -517,8 +518,10 @@ header .navbar-default {
     background-image: url('../images/shelf.jpg');
     background-size: cover;
     /*padding-bottom: 180px;*/
-    background-position: center center;
-    height: 735px;
+    background-position: center;
+    background-attachment:scroll;
+    height:100%;
+    min-height: 735px;
 }
 
 .login-form {
@@ -545,6 +548,7 @@ header .navbar-default {
     margin-left: 0px;
     padding-left: 0px;
     padding-right:0px;
+    background-attachment:fixed;
 }
 /*css for search box div*/
 .find-box {

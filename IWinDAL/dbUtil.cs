@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+
 namespace IWinDAL
 {
     public class dbUtil
@@ -302,5 +306,55 @@ namespace IWinDAL
             System.Web.HttpContext.Current.Response.Write(msg);
         }
 
+        public void Bindddl(DropDownList ctb)
+        {
+            DataTable dt1 = new DataTable();
+            string ctname = ctb.ID.ToString();
+            int ps = getctbtype(ctname);
+            ExecuteSPint("sp_lookups", out dt1, ps);
+            ctb.DataSource = dt1;
+            ctb.DataTextField = dt1.Columns[1].ToString();
+            ctb.DataValueField = dt1.Columns[0].ToString();
+            string ctname2 = ctname.Substring(3);
+            ctb.DataBind();
+            ctb.Items.Insert(0, new ListItem("Choose a " + ctname2, "0"));
+        }
+
+        public void Bindddl(List<DropDownList> ctblist)
+        {
+            foreach (DropDownList ctb in ctblist)
+            {
+                Bindddl(ctb);          //possible improvements to make an overloading method returning a dataset and passing parameters not just 
+                                       //as a single int but as 12 or 124 and later using each int to return Dataset in a single transaction
+            }
+
+        }
+
+        public int getctbtype(string ctl)
+        {
+            int n = 0;
+            switch (ctl)
+            {
+                case "ddlCategory":
+                    n = 1;
+                    break;
+                case "ddlCountry":
+                    n = 2;
+                    break;
+                case "ddlPin":
+                    n = 3;
+                    break;
+                case "ddlSubCategory":
+                    n = 4;
+                    break;
+                case "ddlBrand":
+                    n = 5;
+                    break;
+                default:
+                    n = 0;
+                    break;
+            }
+            return n;
+        }
     }
 }

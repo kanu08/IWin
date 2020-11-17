@@ -20,10 +20,16 @@
                               <asp:Button ID="btn_clearCat" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
                               </div>
                           </div>
+                          <div class="col-sm-12">
+                              <div class="center">
+                              <asp:Label class="lblsuccess" ID="lblMessage" runat="server" Text="" Visible="false">
+                              </asp:Label>
+                              </div>
                           </div>
                       </div>
                       <br />
                 </div>
+       </div>
         </div>
         </div>
         </div>

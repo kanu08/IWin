@@ -10,13 +10,12 @@
                   <div class="row">
                         <div class="col-sm-6">
                                <asp:Label ID="lblSCatName" runat="server" Text="SubCategory name"></asp:Label>&nbsp&nbsp
-                               <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+                               <asp:TextBox ID="txtSCat" runat="server"></asp:TextBox><br />
                                <br /><br />
                             
                          </div> <div class="col-sm-6">
                               <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <asp:DropDownList ID="DropDownList1" runat="server" >
-                                <asp:ListItem>choose a category</asp:ListItem>
+                            <asp:DropDownList ID="ddlCategory" runat="server" >
                               </asp:DropDownList><br />
                                <br /><br />
                          </div></div>
@@ -27,6 +26,12 @@
                               <asp:Button ID="btn_clearCat" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
                               </div>
                           </div>
+                          <div class="col-sm-12">
+                              <div class="center">
+                              <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
+                              </asp:Label>
+                              </div>
+                      </div>
                           </div>
                       </div>
                       <br />
