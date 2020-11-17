@@ -5,66 +5,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 72px;
-            text-align: center;
-            background-color: #FF0000;
-        }
-        .auto-style3 {
-            height: 62px;
-            text-align: center;
-            background-color: #FF0000;
-        }
-        .auto-style4 {
-            height: 83px;
-            text-align: center;
-            background-color: #FF0000;
-        }
-        .auto-style5 {
-            height: 96px;
-            text-align: center;
-            background-color: #FF0000;
-        }
-    </style>
+
+<meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   
 </head>
 <body>
     <form id="form1" runat="server">
-        <p>
-            IWIN</p>
-        <p>
-            Product Page</p>
-        <asp:DataList ID="DataList1" runat="server" BorderStyle="Ridge" DataKeyField="product_id" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand" RepeatColumns="2" RepeatDirection="Horizontal">
-            <ItemTemplate>
-                <table class="auto-style1">
-                    <tr>
-                        <td class="auto-style2">Product ID :
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("product_id") %>'></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style3">
-                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("product_Name") %>'></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style4">
-                            <asp:Button ID="Button1" runat="server" CommandArgument='<%# Eval("product_id")%>' CommandName="addtocart" Height="47px" OnClick="Button1_Click" Text="Add To Cart" Width="123px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style5">
-                            <asp:Button ID="Button2" runat="server" CommandArgument='<%# Eval("product_id")%>' CommandName="viewdetails" Height="47px" OnClick="Button1_Click" Text="View Details" Width="123px" />
-                        </td>
-                    </tr>
-                </table>
-            </ItemTemplate>
-        </asp:DataList>
-        <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConnectionString %>" SelectCommand="SELECT * FROM [tbl_lookup_product]"></asp:SqlDataSource>
-    </form>
+        <div>
+           
+        
+        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="#000099" Text="IWIN"></asp:Label>
+  </div>
+        <asp:Label ID="Label1" runat="server" Text="DEALS OF THE DAY" Font-Bold="True" Font-Italic="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" EnableTheming="True" ForeColor="#990000"></asp:Label>
+            </form>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+     
+    
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="images/pic1.jpg" alt="groceries">
+    </div>
+
+    <div class="item">
+      <img src="images/pic2.jpg" alt="fruits">
+    </div>
+
+    <div class="item">
+      <img src="images/pic3.jpg" alt="bakery">
+    </div>
+         <div class="item">
+      <img src="images/pic4.jpg" alt="bakery">
+    </div>
+    <div class="item">
+      <img src="images/pic5.jpg" alt="bakery">
+    </div>
+      
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+      
 </body>
 </html>
