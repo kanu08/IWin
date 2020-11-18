@@ -10,7 +10,7 @@ using IWinBLL;
 namespace IWin
 {
     public partial class SiteMaster : MasterPage
-    {
+    {       // this method is used to fetch the client's status( i.e. user or admin) from the list
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,11 +23,11 @@ namespace IWin
                 withLogin.Visible = true;
                 username.InnerHtml= Session["user"].ToString();
                 int r = IWinBLL.blUtil.getRole(Session["user"].ToString());
-                if ( r == 1)
+                if ( r == 1)    // if first option is selected. the client is a user
                 {
                     loggedUser.Visible = true;
                 }
-                else if (r==2)
+                else if (r==2)  // if second option is selected. the client is an admin of the application
                 {
                     loggedAdmin.Visible = true;
                 }
@@ -37,7 +37,7 @@ namespace IWin
         }
 
         protected void btn_logOut_Click(object sender, EventArgs e)
-        {
+        {   // if the client clicks on logout button, he is directed to the home page i.e. UserHome
             try
             {
                 Session["user"] = null;
