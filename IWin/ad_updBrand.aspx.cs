@@ -47,13 +47,13 @@ namespace IWin
                 throw ef;
             }
         }
-
+// method to undo editing of the rows in the GridView
         protected void GridView2_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView2.EditIndex = -1;
             gvbind();
         }
-
+// if the user selects the "delete" button for a particular row, the content of that row is removed from the grid 
         protected void GridView2_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int userid = Convert.ToInt32(GridView2.DataKeys[e.RowIndex].Value.ToString());
@@ -74,7 +74,7 @@ namespace IWin
             GridView2.EditIndex = e.NewEditIndex;
             gvbind();
         }
-
+// this method allows the user to edit brand name,  fro a particular row in the GridView
         protected void GridView2_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int userid = Convert.ToInt32(GridView2.DataKeys[e.RowIndex].Value.ToString());
@@ -101,7 +101,7 @@ namespace IWin
         {
 
         }
-
+// this method allows the user to insert a new row for a Ptoduct
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             try
