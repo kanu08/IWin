@@ -15,13 +15,14 @@ namespace userlogin {
         {
 
         }
-
+// fetching data from the table "userlogin" after authenticating the credentials (i.e. username and password)
         protected void Button1_Click(object sender, EventArgs e) {
             SqlConnection con = new SqlConnection("Data Source = DESKTOP-O9MNC2S\SQLEXPRESS01'; Initial Catalog = userlogin; Integrated Security = True");
             SqlDataAdapter sda = new SqlDataAdapter("select * from userlogin where username'" + txtuser.Text + "' and password = '" + txtpass.Text + " and usertype = '" + DropDownList1.SelectedItem.ToString() + "'", con);
             DataTable dt = new DataTable();
 
             sda.Fill(dt);
+            // user type is selected ( as buyer or seller) from the drop down list 
             if (dt.Rows.Count > 0)
             {
                 Response.Write("<script>('you are logined as " + dt.Rows[0][2] + "')</script>");
