@@ -13,6 +13,7 @@ namespace IWinDAL
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
 
+        // in this class, there are methods by which user can search, delete and update the producvt details using options from  filters 
         public int ins_Product(IWinBO.Product obj)
         {
             int res = 0;
