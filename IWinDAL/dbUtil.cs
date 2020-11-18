@@ -17,7 +17,7 @@ namespace IWinDAL
 {
     public class dbUtil
     {
-
+            // establishing connection with the database
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["iwinConn"].ToString());
         int result;
         public DataSet GetDataSetForSP(SqlCommand command)
