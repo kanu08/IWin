@@ -110,9 +110,15 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="ad_MgBuySell.aspx" />
     <Content Include="ad_MgCat.aspx" />
+    <Content Include="ad_viewProd.aspx" />
     <Content Include="email.aspx" />
     <Content Include="images\addtocart.jpg" />
     <Content Include="images\admin.jpg" />
+    <Content Include="images\pic1.jpg" />
+    <Content Include="images\pic2.jpg" />
+    <Content Include="images\pic3.jpg" />
+    <Content Include="images\pic4.jpg" />
+    <Content Include="images\pic5.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="mainProdview.aspx" />
     <Content Include="UserHome.aspx" />
@@ -206,9 +212,11 @@
     <Content Include="UserMenu.ascx" />
     <Content Include="us_bbfProd.aspx" />
     <Content Include="us_beMember.aspx" />
+    <Content Include="us_DealsDay.aspx" />
     <Content Include="us_emailVerify.aspx" />
     <Content Include="us_faq.aspx" />
     <Content Include="us_login.aspx" />
+    <Content Include="us_prodDetails.aspx" />
     <Content Include="us_registeration.aspx" />
     <Content Include="us_rescuedProd.aspx" />
     <Content Include="us_viewAdd.aspx" />
@@ -339,6 +347,13 @@
     <Compile Include="ad_updUser.aspx.designer.cs">
       <DependentUpon>ad_updUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ad_viewProd.aspx.cs">
+      <DependentUpon>ad_viewProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad_viewProd.aspx.designer.cs">
+      <DependentUpon>ad_viewProd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="email.aspx.cs">
       <DependentUpon>email.aspx</DependentUpon>
@@ -443,6 +458,13 @@
     <Compile Include="us_beMember.aspx.designer.cs">
       <DependentUpon>us_beMember.aspx</DependentUpon>
     </Compile>
+    <Compile Include="us_DealsDay.aspx.cs">
+      <DependentUpon>us_DealsDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_DealsDay.aspx.designer.cs">
+      <DependentUpon>us_DealsDay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="us_emailVerify.aspx.cs">
       <DependentUpon>us_emailVerify.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -463,6 +485,13 @@
     </Compile>
     <Compile Include="us_login.aspx.designer.cs">
       <DependentUpon>us_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_prodDetails.aspx.cs">
+      <DependentUpon>us_prodDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_prodDetails.aspx.designer.cs">
+      <DependentUpon>us_prodDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_registeration.aspx.cs">
       <DependentUpon>us_registeration.aspx</DependentUpon>

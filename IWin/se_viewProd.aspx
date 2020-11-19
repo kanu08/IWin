@@ -38,7 +38,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:Image ID="Image1" runat="server" Height="200px" Width="200px" />
+                                <asp:Image ID="Image1" runat="server" Height="200px" Width="200px" OnClientClick="ProductDetail()" />
                             </td>
                         </tr>
                         <tr>

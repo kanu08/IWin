@@ -15,11 +15,20 @@ using System.Web.UI.WebControls;
 
 namespace IWinDAL
 {
+   /// <summary>
+   /// The following class contains all the utility methods that are required in 
+   /// the DAL project to insert, select or update data
+   ///</summary>
     public class dbUtil
     {
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["iwinConn"].ToString());
         int result;
+        ///<summary>
+        ///method to return a dataset from db with command param
+        ///</summary>
+        /// <param name="command"></param>
+        /// <returns>DataSet</returns>
         public DataSet GetDataSetForSP(SqlCommand command)
         {
             DataSet ds = new DataSet();
@@ -41,6 +50,11 @@ namespace IWinDAL
                 return ds;
             }
         }
+        ///<summary>
+        ///method to execute a stored procedure with single int param
+        ///</summary>
+        /// <param name="StoredProcedureName"></param><param name="val"></param>
+        /// <returns></returns>
         public void ExecuteSPint(string StoredProcedureName, out DataTable dtemp, [Optional] int val)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -71,6 +85,11 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         public DataSet GetDataSetForQuery(SqlCommand command)
         {
             DataSet ds = new DataSet();

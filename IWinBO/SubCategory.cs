@@ -14,6 +14,7 @@ namespace IWinBO
 
         public string SubcategoryName { get => subcategoryName; set => subcategoryName = value; }
         public int CatValue { get => catValue; set => catValue = value; }
+        public int subCatId { get; set; }
         public int OP { get => oP; set => oP = value; }
     }
 }
