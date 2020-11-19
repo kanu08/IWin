@@ -67,7 +67,7 @@
                         </ul></div>
                     <div id="withLogin" class="right-nav" runat="server" visible="false">
                         <div class="sign" >
-                            <a runat="server" href="~/profile" style="color:#FFFFFF;font-size:inherit" title="click to see profile">Welcome&nbsp
+                            <a runat="server" href="~/us_profile" style="color:#FFFFFF;font-size:inherit" title="click to see profile">Welcome&nbsp
                                 <label id="username" runat="server" ></label>
                                 </a>&nbsp<button id="logout" onserverclick="btn_logOut_Click" title="click to logout" style="background-color:#638212" runat="server">
                                     <span class="glyphicon glyphicon-off" aria-hidden="true" style="color:#FFFFFF;" ></span></button>

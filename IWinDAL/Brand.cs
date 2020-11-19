@@ -12,7 +12,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
-
+        /// <summary>
+        /// This method is used to insert a brand in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int ins_Brand(IWinBO.Brand obj)
         {
             int res = 0;
@@ -35,6 +39,10 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to show all brands in the database
+        /// </summary>
+        /// <returns></returns>
         public DataTable search_Init()
         {
             DataTable dt = new DataTable();
@@ -53,6 +61,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables[0];
         }
+        /// <summary>
+        /// This method is used to search a brand in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable search_Text(IWinBO.Brand obj)
         {
             DataTable dt = new DataTable();
@@ -72,6 +85,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables[0];
         }
+        /// <summary>
+        /// This method is used to update brand details
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int update_Brand(IWinBO.Brand obj)
         {
             int res = 0;
@@ -95,6 +113,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to delete brand details
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int delete_Brand(IWinBO.Brand obj)
         {
             int res = 0;

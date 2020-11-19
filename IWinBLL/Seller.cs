@@ -9,6 +9,11 @@ namespace IWinBLL
 {
     public class Seller
     {
+        /// <summary>
+        /// This method is used to implement logic to insert a seller
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int insertSeller(IWinBO.Seller obj)
         {
             try

@@ -15,6 +15,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
+        /// <summary>
+        /// This method is used to insert a seller in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int insSeller(IWinBO.Seller obj)
         {
             int res = 0;

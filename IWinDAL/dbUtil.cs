@@ -86,7 +86,7 @@ namespace IWinDAL
             }
         }
         /// <summary>
-        /// 
+        /// method to return dataset on executing dataset
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
@@ -110,6 +110,11 @@ namespace IWinDAL
                 return ds;
             }
         }
+        /// <summary>
+        /// execute query with db connection from config
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         public int ExecuteQuery(String query)
         {
             DataSet ds = new DataSet();
@@ -134,6 +139,12 @@ namespace IWinDAL
                 return result;
             }
         }
+        /// <summary>
+        /// execute stored procedure to return dataset in return to string parameters in array
+        /// </summary>
+        /// <param name="StoredProcedureName"></param>
+        /// <param name="dtemp"></param>
+        /// <param name="aryParameters"></param>
         public void ExecuteSP(string StoredProcedureName, out DataSet dtemp, [Optional] string[,] aryParameters)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -175,6 +186,12 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// execute stored procedure to return int value in return to string params in array
+        /// </summary>
+        /// <param name="StoredProcedureName"></param>
+        /// <param name="res"></param>
+        /// <param name="aryParameters"></param>
         public void ExecuteSP(string StoredProcedureName, [Optional] out int res, [Optional] string[,] aryParameters)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -209,6 +226,11 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// execute stored procedure to return role id in return of email string
+        /// </summary>
+        /// <param name="role"></param>
+        /// <param name="em"></param>
         public void ExecuteSProle([Optional] out int role, [Optional] string em)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -240,6 +262,11 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// execute stored procedure to return email in return to contact 
+        /// </summary>
+        /// <param name="reEmail"></param>
+        /// <param name="nu"></param>
         public void ExecuteSPem([Optional] out string reEmail, [Optional] string nu)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -271,6 +298,12 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// execute stored procedure to return a list of params in return to strings in array
+        /// </summary>
+        /// <param name="StoredProcedureName"></param>
+        /// <param name="ds"></param>
+        /// <param name="aryParameters"></param>
         public void ExecuteSP(string StoredProcedureName, out List<string> ds, [Optional] string[,] aryParameters)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -317,6 +350,10 @@ namespace IWinDAL
                 }
             }
         }
+        /// <summary>
+        /// This is to display error message in above util methods
+        /// </summary>
+        /// <param name="sMessage"></param>
         public void MsgBox(String sMessage)
         {
             string msg = "<script language=\"javascript\">";
@@ -324,7 +361,10 @@ namespace IWinDAL
             msg += "</script>";
             System.Web.HttpContext.Current.Response.Write(msg);
         }
-
+        /// <summary>
+        /// This is to bind dropdown with their respective lookup table
+        /// </summary>
+        /// <param name="ctb"></param>
         public void Bindddl(DropDownList ctb)
         {
             DataTable dt1 = new DataTable();
@@ -338,7 +378,10 @@ namespace IWinDAL
             ctb.DataBind();
             ctb.Items.Insert(0, new ListItem("Choose a " + ctname2, "0"));
         }
-
+        /// <summary>
+        /// This is to bind multiple dropdown controls in a webpage through single transaction
+        /// </summary>
+        /// <param name="ctblist"></param>
         public void Bindddl(List<DropDownList> ctblist)
         {
             foreach (DropDownList ctb in ctblist)
@@ -348,7 +391,11 @@ namespace IWinDAL
             }
 
         }
-
+        /// <summary>
+        /// This is to get type for particlar dropdown
+        /// </summary>
+        /// <param name="ctl"></param>
+        /// <returns></returns>
         public int getctbtype(string ctl)
         {
             int n = 0;

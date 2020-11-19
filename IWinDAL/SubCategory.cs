@@ -14,6 +14,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
+        /// <summary>
+        /// This method is used to insert a sub category in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int insSubCat(IWinBO.SubCategory obj)
         {
             int res = 0;
@@ -35,6 +40,10 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method return all subcategories in the database
+        /// </summary>
+        /// <returns></returns>
         public DataTable search_Init()
         {
             DataTable dt = new DataTable();
@@ -53,6 +62,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables[0];
         }
+        /// <summary>
+        /// This method is used to update subcategory details in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int updateSubCategory(IWinBO.SubCategory obj)
         {
             int res = 0;
@@ -75,6 +89,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to delete subcategory in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int deleteSubCategory(IWinBO.SubCategory obj)
         {
             int res = 0;
@@ -95,6 +114,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to search a sub category in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable search(IWinBO.SubCategory obj)
         {
             DataTable dt = new DataTable();

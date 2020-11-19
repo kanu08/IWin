@@ -8,6 +8,11 @@ namespace IWinBLL
 {
     public class Buyer
     {
+        /// <summary>
+        /// This method is used to implement logic to add a buyer
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int insertBuyer(IWinBO.Buyer obj)
         {
             try
@@ -21,6 +26,11 @@ namespace IWinBLL
                 throw ex;
             }
         }
+        /// <summary>
+        /// This method is used to implement logic to login a buyer
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int loginBuyer(IWinBO.Buyer obj)
         {
             try

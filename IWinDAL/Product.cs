@@ -12,7 +12,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
-
+        /// <summary>
+        /// this is to insert product BO in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int ins_Product(IWinBO.Product obj)
         {
             int res = 0;
@@ -40,6 +44,10 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This is to fetch all the products from the database on initial load
+        /// </summary>
+        /// <returns></returns>
         public DataTable search_Init()
         {
             DataTable dt = new DataTable();
@@ -58,6 +66,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables[0];
         }
+        /// <summary>
+        /// This method is used to update product details
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int update_Product(IWinBO.Product obj)
         {
             int res = 0;
@@ -84,6 +97,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to delete the product from database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int delete_Product(IWinBO.Product obj)
         {
             int res = 0;
@@ -106,6 +124,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to search a product in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable search_Product(IWinBO.Product obj)
         {
             DataTable dt = new DataTable();
@@ -125,6 +148,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables["Table"];
         }
+        /// <summary>
+        /// This method is used to filter the products based on their attributes
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable Filter(IWinBO.Product obj)
         {
             DataTable dt = new DataTable();

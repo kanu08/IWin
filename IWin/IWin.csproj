@@ -217,6 +217,7 @@
     <Content Include="us_faq.aspx" />
     <Content Include="us_login.aspx" />
     <Content Include="us_prodDetails.aspx" />
+    <Content Include="us_profile.aspx" />
     <Content Include="us_registeration.aspx" />
     <Content Include="us_rescuedProd.aspx" />
     <Content Include="us_viewAdd.aspx" />
@@ -492,6 +493,13 @@
     </Compile>
     <Compile Include="us_prodDetails.aspx.designer.cs">
       <DependentUpon>us_prodDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_profile.aspx.cs">
+      <DependentUpon>us_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_profile.aspx.designer.cs">
+      <DependentUpon>us_profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_registeration.aspx.cs">
       <DependentUpon>us_registeration.aspx</DependentUpon>

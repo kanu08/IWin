@@ -14,6 +14,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
+        /// <summary>
+        /// This method is used to insert a buyer in database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int insBuyer(IWinBO.Buyer obj)
         {
             int res = 0;
@@ -37,6 +42,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to return details of buyer on login
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public List<string> loginBuyer(IWinBO.Buyer obj)
         {
             List<string> hh2 = new List<string>();

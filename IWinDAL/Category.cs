@@ -16,7 +16,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
-
+        /// <summary>
+        /// This method is used to insert a category in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int ins_Category(IWinBO.Category obj)
         {
             int res = 0;
@@ -39,6 +43,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to search a category in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public DataTable search_Category(IWinBO.Category obj)
         {
             DataTable dt = new DataTable();
@@ -56,6 +65,10 @@ namespace IWinDAL
             }
             return dt = ds.Tables["Table"];
         }
+        /// <summary>
+        /// This method is used to return all the categories in the database
+        /// </summary>
+        /// <returns></returns>
         public DataTable search_Init()
         {
             DataTable dt = new DataTable();
@@ -73,6 +86,11 @@ namespace IWinDAL
             }
             return dt = ds.Tables["Table"];
         }
+        /// <summary>
+        /// This method is used to update category detail in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int Update_Category(IWinBO.Category obj)
         {
             int res = 0;
@@ -96,7 +114,11 @@ namespace IWinDAL
             }
             return Result;
         }
-
+        /// <summary>
+        /// This method is used to delete a category in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int Delete_Category(IWinBO.Category obj)
         {
             int res = 0;
