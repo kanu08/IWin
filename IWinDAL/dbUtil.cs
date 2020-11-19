@@ -262,6 +262,38 @@ namespace IWinDAL
                 }
             }
         }
+        ///
+        public void ExecuteSPstatus([Optional] out int role, [Optional] string em)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    con.Open();
+                    command.CommandType = CommandType.StoredProcedure;
+                    int result = 0;
+                    command.CommandText = "sp_user_Buyer";
+                    command.CommandTimeout = 300;
+                    try
+                    {
+                        command.Parameters.Add(new SqlParameter("@UEmail", em));
+                        command.Parameters.Add(new SqlParameter("@OP", 3));
+                    }
+                    catch (Exception ex)
+                    {
+                        //ErrHandler.WriteError(ex.ToString());
+                        throw ex;
+                    }
+                    command.Connection = con;
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    result = Convert.ToInt32(reader["RoleId"]);
+                    con.Close();
+                    role = result;
+                }
+            }
+        }
         /// <summary>
         /// execute stored procedure to return email in return to contact 
         /// </summary>
