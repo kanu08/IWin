@@ -34,5 +34,7 @@ namespace IWin
                 Response.Redirect("AddtoCart.aspx?id=" + e.CommandArgument.ToString() + "&quantity=" + dlist.SelectedItem.ToString());
             }
         }
+
+
     }
 }

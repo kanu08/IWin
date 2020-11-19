@@ -21,7 +21,7 @@ namespace IWinDAL
                 string[,] arraySell = new string[,]
                 {
                     { "@In_ProductName", obj.ProductName } ,
-                     { "@IN_CategoryID",Convert.ToString(obj.CatogoryId) } ,
+                     //{ "@IN_CategoryID",Convert.ToString(obj.CatogoryId) } ,
                      { "@IN_SubCategoryID",Convert.ToString(obj.SubCatogoryId) } ,
                     { "@IN_Price",Convert.ToString(obj.Price) } ,
                     {"@IN_Image",obj.ProductImage },
