@@ -16,6 +16,7 @@ namespace IWin
         IWinDAL.dbUtil du = new IWinDAL.dbUtil();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!Page.IsPostBack)
             {
                 du.Bindddl(ddlCategory);

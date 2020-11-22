@@ -43,6 +43,34 @@ namespace IWinDAL
             return Result;
         }
         /// <summary>
+        /// This method is used to update buyer details in database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int updBuyerDtl(IWinBO.Buyer obj)
+        {
+            int res = 0;
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@UName", obj.Name } ,
+                    { "@UContact", obj.Contact },
+                    { "@UEmail", obj.Email },
+                    { "@UPin", obj.PinCode},
+                    { "@OP", obj.OP.ToString() }
+                };
+                objcon.ExecuteSP("sp_user_Buyer", out res, arraySell);
+                Result = res;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
+        /// <summary>
         /// This method is used to return details of buyer on login
         /// </summary>
         /// <param name="obj"></param>
@@ -67,6 +95,29 @@ namespace IWinDAL
                 throw e;
             }
             return hh2;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getDetails(string em)
+        {
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@UEmail", em },
+                    { "@OP", "5" }
+                };
+                objcon.ExecuteSP("sp_user_Buyer", out ds, arraySell);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return dt = ds.Tables[0];
         }
     }
 }

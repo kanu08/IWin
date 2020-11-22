@@ -12,6 +12,8 @@ namespace IWinBO
         private string contact;
         private string email;
         private string password;
+        private string city;
+        private string pinCode;
         private int oP;
 
         public string Name { get => name; set => name = value; }
@@ -19,5 +21,7 @@ namespace IWinBO
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
         public int OP { get => oP; set => oP = value; }
+        public string City { get => city; set => city = value; }
+        public string PinCode { get => pinCode; set => pinCode = value; }
     }
 }

@@ -121,6 +121,7 @@
     <Content Include="images\pic5.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="mainProdview.aspx" />
+    <Content Include="se_register.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
     <Content Include="ad_addCat.aspx" />
@@ -369,6 +370,13 @@
     </Compile>
     <Compile Include="mainProdview.aspx.designer.cs">
       <DependentUpon>mainProdview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="se_register.aspx.cs">
+      <DependentUpon>se_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_register.aspx.designer.cs">
+      <DependentUpon>se_register.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserHome.aspx.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>

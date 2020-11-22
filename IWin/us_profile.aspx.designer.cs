@@ -33,6 +33,15 @@ namespace IWin
         protected global::System.Web.UI.WebControls.TextBox txtUName;
 
         /// <summary>
+        /// rfv_txtUName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtUName;
+
+        /// <summary>
         /// Verify control.
         /// </summary>
         /// <remarks>
@@ -42,30 +51,66 @@ namespace IWin
         protected global::System.Web.UI.WebControls.Button Verify;
 
         /// <summary>
-        /// btn_saveSubCat control.
+        /// lblUCont control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_saveSubCat;
+        protected global::System.Web.UI.WebControls.Label lblUCont;
 
         /// <summary>
-        /// btn_clearCat control.
+        /// txtUCont control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_clearCat;
+        protected global::System.Web.UI.WebControls.TextBox txtUCont;
 
         /// <summary>
-        /// lblmessage control.
+        /// lblUPin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmessage;
+        protected global::System.Web.UI.WebControls.Label lblUPin;
+
+        /// <summary>
+        /// ddlPinCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPinCode;
+
+        /// <summary>
+        /// lblUCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUCity;
+
+        /// <summary>
+        /// btn_editProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_editProfile;
+
+        /// <summary>
+        /// btn_clearEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_clearEdit;
     }
 }

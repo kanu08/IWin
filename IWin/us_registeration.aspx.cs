@@ -24,7 +24,6 @@ namespace IWin
             {
                 string en_password = null;
                 IWinBO.Buyer bu = new IWinBO.Buyer();
-                //IWinBLL.blUtil ps = new IWinBLL.blUtil();
                 bu.Name = txtUName.Text;
                 bu.Contact = txtUNum.Text;
                 bu.Email = txtUEmail.Text;

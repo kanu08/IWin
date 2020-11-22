@@ -91,24 +91,6 @@ namespace IWinBLL
             }
             return reEmail;
         }
-        /// <summary>
-        /// This method is used to return the verification status of the user
-        /// </summary>
-        /// <param name="em"></param>
-        /// <returns></returns>
-        public static int getStatus(string em)
-        {
-            int status = 0;
-            try
-            {
-                IWinDAL.dbUtil d1 = new IWinDAL.dbUtil();
-                d1.ExecuteSProle(out status, em);
-            }
-            catch
-            {
-
-            }
-            return status;
-        }
+        
     }
 }

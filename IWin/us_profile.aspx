@@ -10,27 +10,39 @@
                   <div class="row">
                         <div class="col-sm-6">
                                <asp:Label ID="lblUName" runat="server" Text="Username"></asp:Label>&nbsp&nbsp
-                               <asp:TextBox ID="txtUName" runat="server"></asp:TextBox><br />
-                               <br /><br />
-                         </div> <div class="col-sm-6">
-                              <asp:Button ID="Verify" runat="server" Text="Click here to verify your email" Width="220px" />
-                         </div>
+                               <asp:TextBox ID="txtUName" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfv_txtUName" runat="server" ErrorMessage="!" Font-Bold="true" ForeColor="Red" ControlToValidate="txtUName"></asp:RequiredFieldValidator>
+                               <br />
+                               <br />
+                               <br />
+                        </div> 
+                        <div class="col-sm-6">
+                              <asp:Button ID="Verify" runat="server" Text="Click here to verify your email" Width="220px" OnClick="Verify_Click" />
+                        </div>
                   </div>
+                  <div class="row">
+                        <div class="col-sm-6">
+                               <asp:Label ID="lblUCont" runat="server" Text="Contact"></asp:Label>&nbsp&nbsp
+                               <asp:TextBox ID="txtUCont" runat="server"></asp:TextBox><br />
+                               <br /><br />
+                         </div> 
+                       <div class="col-sm-6">
+                               <asp:Label ID="lblUPin" runat="server" Text="PinCode"></asp:Label>&nbsp&nbsp
+                               <asp:DropDownList ID="ddlPinCode" runat="server" >
+                               </asp:DropDownList> <br /><br />
+                               <asp:Label ID="lblUCity" runat="server" ></asp:Label>
+                               <br />
+                         </div> 
+                      </div>
                       <div class="row">
                             <div class="col-sm-12">
                               <div class="center">
-                              <asp:Button ID="btn_saveSubCat" runat="server" Text="Save" OnClick="btn_saveSubCat_Click"/>&nbsp&nbsp
-                              <asp:Button ID="btn_clearCat" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
+                              <asp:Button ID="btn_editProfile" runat="server" Text="Edit" OnClick="btn_editProfile_Click" />&nbsp&nbsp
+                              <asp:Button ID="btn_clearEdit" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
                               </div>
-                          </div>
-                          <div class="col-sm-12">
-                              <div class="center">
-                              <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
-                              </asp:Label>
-                              </div>
+                            </div>
                       </div>
-                          </div>
-                      </div>
+                </div>
                       <br />
    </div>
    </div>
