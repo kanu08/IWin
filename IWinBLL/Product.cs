@@ -40,5 +40,22 @@ namespace IWinBLL
             IWinDAL.Product objDAL = new IWinDAL.Product();
             return objDAL.Filter(obj);
         }
+        public DataSet GetNearExpiryProducts()
+        {
+            IWinDAL.ProductBestBeforeDate objDAL = new IWinDAL.ProductBestBeforeDate();
+            try
+            {
+                return objDAL.GetNearExpiryProducts();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                objDAL = null;
+            }
+        }
+
     }
 }
