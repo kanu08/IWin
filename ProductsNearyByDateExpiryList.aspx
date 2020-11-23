@@ -1,6 +1,7 @@
 ﻿
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductsNearyByDateExpiryList.aspx.cs" Inherits="IWin.ProductsNearyByDateExpiryList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    //  Best Before for viewing best before products
     <h1>Best Before Section</h1>
   <asp:GridView ID="grdproductDetails" runat="server" DataKeyNames="ProductID"
         AutoGenerateColumns="False"
