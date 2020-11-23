@@ -16,7 +16,7 @@ namespace IWin
         {
             if (!Page.IsPostBack)
             {
-            //Bind Gridview during pageload
+            // Bind Gridview during pageload
                 BindProductRecordsGridView();
             }
 
