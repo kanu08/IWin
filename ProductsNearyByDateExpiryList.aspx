@@ -1,14 +1,14 @@
 ﻿
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductsNearyByDateExpiryList.aspx.cs" Inherits="IWin.ProductsNearyByDateExpiryList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    // Best Before for viewing best before products
+  <%--  Best Before for viewing best before products--%>
+    <table style="align-content:center;margin-top:40px"; >
+        <tr>
     <h1>Best Before Section</h1>
   <asp:GridView ID="grdproductDetails" runat="server" DataKeyNames="ProductID"
         AutoGenerateColumns="False"
         onpageindexchanging="grdproductDetails_PageIndexChanging"
-        onrowcancelingedit="grdproductDetails_RowCancelingEdit"
-        onrowediting="grdproductDetails_RowEditing"
-        onrowupdating="grdproductDetails_RowUpdating" AllowPaging="True" PageSize="5"
+        AllowPaging="True" PageSize="5"
         CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
@@ -45,7 +45,7 @@
     </asp:TemplateField>
     <asp:TemplateField HeaderText="Edit" ItemStyle-HorizontalAlign="Center">
     <ItemTemplate>
-        <asp:ImageButton ID="imgEdit" runat="server" ImageUrl="~/Images/edit.jpg" CommandName="Edit" CausesValidation="false"/>
+        <asp:Button ID="imgEdit" runat="server" text="Edit" CommandName="Edit" CausesValidation="false"/>
     </ItemTemplate>
     <EditItemTemplate>
     <asp:LinkButton ID="lnkUpdate" runat="server" Text="Update" CommandName="Update" CausesValidation="false"></asp:LinkButton>
@@ -55,7 +55,7 @@
     </asp:TemplateField>
     <asp:TemplateField HeaderText="Delete" ItemStyle-HorizontalAlign="Center">
     <ItemTemplate>
-        <asp:ImageButton ID="imgDelete" runat="server" ImageUrl="~/Images/delete.jpg" CommandName="Delete" CausesValidation="false" onclientclick="return confirm('Are you sure you want to delete?')" />
+        <asp:Button ID="imgDelete" runat="server" text="Delete" CommandName="Delete" CausesValidation="false" onclientclick="return confirm('Are you sure you want to delete?')" />
     </ItemTemplate>
     <EditItemTemplate>       
     </EditItemTemplate>
@@ -73,4 +73,6 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+            </tr>
+        </table>
 </asp:Content>
