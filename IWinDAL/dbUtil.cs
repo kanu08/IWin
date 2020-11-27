@@ -11,7 +11,7 @@ using System.Runtime.Remoting.Messaging;
 
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.ComponentModel;
 
 namespace IWinDAL
 {
@@ -421,6 +421,55 @@ namespace IWinDAL
                     break;
             }
             return n;
+        }
+        /// <summary>
+        /// This method is specifically to convert a list of objects or value types to Datatable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static DataTable ConvertData<T>(List<T> data)
+        {
+                DataTable table = new DataTable();
+
+                //special handling for value types and string
+                if (typeof(T).IsValueType || typeof(T).Equals(typeof(string)))
+                {
+
+                    DataColumn dc = new DataColumn("Value", typeof(T));
+                    table.Columns.Add(dc);
+                    foreach (T item in data)
+                    {
+                        DataRow dr = table.NewRow();
+                        dr[0] = item;
+                        table.Rows.Add(dr);
+                    }
+                }
+                else
+                {
+                    PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
+                    foreach (PropertyDescriptor prop in properties)
+                    {
+                        table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+                    }
+                    foreach (T item in data)
+                    {
+                        DataRow row = table.NewRow();
+                        foreach (PropertyDescriptor prop in properties)
+                        {
+                            try
+                            {
+                                row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                            }
+                            catch (Exception ex)
+                            {
+                                row[prop.Name] = DBNull.Value;
+                            }
+                        }
+                        table.Rows.Add(row);
+                    }
+                }
+                return table;
         }
     }
 }

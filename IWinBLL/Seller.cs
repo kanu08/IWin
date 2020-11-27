@@ -27,5 +27,33 @@ namespace IWinBLL
                 throw ex;
             }
         }
+    
+        public int FindDtlId(int detailId)
+        {
+            try
+            {
+                IWinDAL.Seller objDA = new IWinDAL.Seller();
+                return objDA.FindDtlId(detailId);
+            }
+            catch (Exception ex)
+            {
+                //ErrHandler.WriteError(ex.ToString());
+                throw ex;
+            }
+        }
+
+        public int regSeller(IWinBO.Seller obj)
+        {
+            try
+            {
+                IWinDAL.Seller objDA = new IWinDAL.Seller();
+                return objDA.regSeller(obj);
+            }
+            catch (Exception ex)
+            {
+                //ErrHandler.WriteError(ex.ToString());
+                throw ex;
+            }
+        }
     }
 }

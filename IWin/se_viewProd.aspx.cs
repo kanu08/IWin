@@ -33,8 +33,11 @@ namespace IWin
                 DropDownList dlist = (DropDownList)(e.Item.FindControl("DropDownList1"));
                 Response.Redirect("AddtoCart.aspx?id=" + e.CommandArgument.ToString() + "&quantity=" + dlist.SelectedItem.ToString());
             }
+            else if(e.CommandName == "viewDetail")
+            {
+                Response.Redirect("us_prodDetails.aspx?id="+e.CommandArgument.ToString());
+            }
         }
-
 
     }
 }

@@ -8,7 +8,9 @@
     width:25%;
 }
 
-
+#MainContent_BrandList label {
+    color: white;
+}
 
 .Question {
     font-size: 14px;

@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%--contributed by lourdu--%>
      <div class="seller">
-    <div class="container">
+    <div class="container" >
    <%--<div class="row clearfix">--%>
-   <div class="find-box">
-    <div>
+<%--   <div class="find-box">--%>
+    <div style="margin-top: 70px;margin-left:20px;margin-right:20px;">
             <br />
             <br />
-            <h1>Products</h1>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblprod" runat="server" ForeColor="#FFFFFF" Text="Products" Font-Size="XX-Large" Font-Bold="true"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" ForeColor="#FFFFFF" Text="You have"></asp:Label>
@@ -37,10 +37,16 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <asp:Image ID="Image1" runat="server" Height="200px" Width="200px" OnClientClick="ProductDetail()" />
+                            <td class="auto-style2">
+                                <asp:ImageButton ID="Image1" runat="server" Height="200px" ImageUrl='<%# "~/images/" + Eval("Image") %>' Width="250px" CommandArgument='<%# Eval("product_id")%>' 
+                                    CommandName="viewDetail"/>
                             </td>
                         </tr>
+                       <%-- <tr>
+                            <td>
+                                <asp:Image ID="Imag" runat="server" Height="200px" Width="200px" OnClientClick="ProductDetail()" />
+                            </td>
+                        </tr>--%>
                         <tr>
                             <td>Price
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("price") %>'></asp:Label>
@@ -73,5 +79,5 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand="SELECT * FROM [tbl_lookup_product]"></asp:SqlDataSource>
             <br />
         </div>
-       </div></div></div><%--</div>--%>
+       </div></div><%--</div></div>--%>
 </asp:Content>

@@ -38,7 +38,7 @@ namespace IWin
                     txtUName.Text = dtFull.Rows[0][1].ToString();
                     txtUCont.Text = dtFull.Rows[0][3].ToString();
                     p = dtFull.Rows[0][6].ToString();
-                    if (p!= null)
+                    if (p!= null && p!= "")
                     {
                         ddlPinCode.Items.FindByText(p).Selected = true;
                         lblUCity.Text = dtFull.Rows[0][5].ToString();

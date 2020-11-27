@@ -43,7 +43,7 @@ namespace IWin
                 //IWinBLL.blUtil ps = new IWinBLL.blUtil();
                 sc.ProductName = txtSCat.Text;
                 //sc.CatogoryId = Convert.ToInt32(ddlCategory.SelectedItem.Value);
-                sc.SubCatogoryId = Convert.ToInt32(ddlSubCategory.SelectedItem.Value);
+                sc.SubCategoryId = Convert.ToInt32(ddlSubCategory.SelectedItem.Value);
                 sc.Brandid = Convert.ToInt32(ddlBrand.SelectedItem.Value);
                 sc.Price = Convert.ToDouble(txtPrice.Text);
                 sc.ProductImage = FileUpload1.FileName;

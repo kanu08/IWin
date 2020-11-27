@@ -6,13 +6,13 @@
  <div id="sidebar-wrapper">
  <ul class="sidebar-nav">
  <li><a runat="server" href="~/ad_addCat.aspx" style="color:white;padding-bottom:8px;">Add Category</a></li>
- <li><a runat="server" href="~/mainProdview.aspx" style="color:white;padding-bottom:8px;">View/Edit Category</a></li>
+ <li><a runat="server" href="~/ad_updCat.aspx" style="color:white;padding-bottom:8px;">View/Edit Category</a></li>
  <li><a runat="server" href="~/ad_addSubcat.aspx" style="color:white;padding-bottom:8px;">Add SubCategory</a></li>
- <li><a runat="server" href="~/" style="color:white;padding-bottom:8px;">View/Edit SubCategory</a></li>
+ <li><a runat="server" href="~/ad_updSubcat.aspx" style="color:white;padding-bottom:8px;">View/Edit SubCategory</a></li>
  <li><a runat="server" href="~/ad_addProduct.aspx" style="color:white;padding-bottom:8px;">Add Product</a></li>
- <li><a runat="server" href="~/" style="color:white;padding-bottom:8px;">View/Edit Product</a></li>
+ <li><a runat="server" href="~/ad_viewProd.aspx" style="color:white;padding-bottom:8px;">View/Edit Product</a></li>
  <li><a runat="server" href="~/ad_addBrand.aspx" style="color:white;padding-bottom:8px;">Add Brand</a></li>
- <li><a runat="server" href="~/" style="color:white;padding-bottom:8px;">View/Edit Brand</a></li>
+ <li><a runat="server" href="~/ad_updBrand" style="color:white;padding-bottom:8px;">View/Edit Brand</a></li>
  </ul></div>
     <div class="container">
    <div class="row clearfix">

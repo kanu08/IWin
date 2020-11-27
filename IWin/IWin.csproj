@@ -114,13 +114,16 @@
     <Content Include="email.aspx" />
     <Content Include="images\addtocart.jpg" />
     <Content Include="images\admin.jpg" />
+    <Content Include="images\apple.jpg" />
+    <Content Include="images\ava.jpg" />
+    <Content Include="images\banana.jpg" />
     <Content Include="images\pic1.jpg" />
     <Content Include="images\pic2.jpg" />
     <Content Include="images\pic3.jpg" />
     <Content Include="images\pic4.jpg" />
     <Content Include="images\pic5.jpg" />
     <Content Include="images\pick.jpg" />
-    <Content Include="mainProdview.aspx" />
+    <Content Include="ad_updCat.aspx" />
     <Content Include="se_register.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
@@ -130,7 +133,6 @@
     <Content Include="ad_addUser.aspx" />
     <Content Include="ad_Reports.aspx" />
     <Content Include="ad_updBrand.aspx" />
-    <Content Include="ad_updCat.aspx" />
     <Content Include="ad_updProduct.aspx" />
     <Content Include="ad_updSeller.aspx" />
     <Content Include="ad_updSubcat.aspx" />
@@ -166,7 +168,7 @@
     <Content Include="images\bg_main.jpg" />
     <Content Include="images\bread.jpg" />
     <Content Include="images\napkins.jpg" />
-    <Content Include="images\oranges.jpg" />
+    <Content Include="images\orange.jpg" />
     <Content Include="images\pepper.jpg" />
     <Content Include="images\racing.gif" />
     <Content Include="images\sanitizer.jpg" />
@@ -314,13 +316,6 @@
     <Compile Include="ad_updBrand.aspx.designer.cs">
       <DependentUpon>ad_updBrand.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ad_updCat.aspx.cs">
-      <DependentUpon>ad_updCat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ad_updCat.aspx.designer.cs">
-      <DependentUpon>ad_updCat.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ad_updProduct.aspx.cs">
       <DependentUpon>ad_updProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,12 +359,12 @@
     <Compile Include="email.aspx.designer.cs">
       <DependentUpon>email.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mainProdview.aspx.cs">
-      <DependentUpon>mainProdview.aspx</DependentUpon>
+    <Compile Include="ad_updCat.aspx.cs">
+      <DependentUpon>ad_updCat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mainProdview.aspx.designer.cs">
-      <DependentUpon>mainProdview.aspx</DependentUpon>
+    <Compile Include="ad_updCat.aspx.designer.cs">
+      <DependentUpon>ad_updCat.aspx</DependentUpon>
     </Compile>
     <Compile Include="se_register.aspx.cs">
       <DependentUpon>se_register.aspx</DependentUpon>

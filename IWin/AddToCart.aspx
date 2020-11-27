@@ -1,14 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddToCart.aspx.cs" Inherits="IWin.AddToCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+     <div class="seller">
+    <div class="container">
+   <%--<div class="row clearfix">--%>
+   <div class="find-box">
     <div>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="IWin"></asp:Label>
             <br />
             <br />
-            You have
-            <asp:Label ID="Label2" runat="server"></asp:Label>
-&nbsp;products in your cart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" NavigateUrl="~/se_viewProd.aspx">Continue Shopping</asp:HyperLink>
+         <asp:Label ID="you" runat="server" Text="You have" ForeColor="White"></asp:Label>
+            <asp:Label ID="Label2" runat="server" ForeColor="White"></asp:Label>
+&nbsp;&nbsp;<asp:Label ID="Label9" runat="server" Text="products in your cart" ForeColor="White"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" NavigateUrl="~/se_viewProd.aspx" ForeColor="White">Continue Shopping</asp:HyperLink>
             <br />
             <br />
             <br />
@@ -25,6 +28,9 @@
                     <asp:BoundField DataField="Name" HeaderText="Product Name">
                     <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
+                    <asp:ImageField DataImageUrlField="Image" HeaderText="Product Image" ItemStyle-Height="100px" ItemStyle-Width="100px">
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:ImageField>
                     <asp:BoundField DataField="price" HeaderText="Price">
                     <ItemStyle HorizontalAlign="Center" />
                     </asp:BoundField>
@@ -47,4 +53,5 @@
                 <SortedDescendingHeaderStyle BackColor="#93451F" />
             </asp:GridView>
         </div>
+       </div></div></div>
 </asp:Content>

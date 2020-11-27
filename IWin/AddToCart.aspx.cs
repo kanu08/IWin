@@ -14,6 +14,7 @@ namespace IWin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string img = null;
             if (!IsPostBack)
             {
                 DataTable dt = new DataTable();
@@ -21,6 +22,7 @@ namespace IWin
                 dt.Columns.Add("sno");
                 dt.Columns.Add("product_id");
                 dt.Columns.Add("Name");
+                dt.Columns.Add("Image");
                 dt.Columns.Add("quantity");
                 dt.Columns.Add("price");
                 dt.Columns.Add("totalprice");
@@ -45,11 +47,13 @@ namespace IWin
                         dr["sno"] = 1;
                         dr["product_id"] = ds.Tables[0].Rows[0]["product_id"].ToString();
                         dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                        img= ds.Tables[0].Rows[0]["Image"].ToString();
+                        dr["Image"] = "~/images/" + img;
                         dr["quantity"] = Request.QueryString["quantity"];
                         dr["price"] = ds.Tables[0].Rows[0]["price"].ToString();
-                        int price = Convert.ToInt32(ds.Tables[0].Rows[0]["price"]);
+                        Double price = Convert.ToDouble(ds.Tables[0].Rows[0]["price"]);
                         int quantity = Convert.ToInt32(Request.QueryString["quantity"]);
-                        int totalprice = price * quantity;
+                        Double totalprice = price * quantity;
                         dr["totalprice"] = totalprice;
 
                         dt.Rows.Add(dr);
@@ -83,11 +87,13 @@ namespace IWin
                         dr["sno"] = 1;
                         dr["product_id"] = ds.Tables[0].Rows[0]["product_id"].ToString();
                         dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                        img= ds.Tables[0].Rows[0]["Image"].ToString();
+                        dr["Image"] = "~/images/"+img;
                         dr["quantity"] = Request.QueryString["quantity"];
                         dr["price"] = ds.Tables[0].Rows[0]["price"].ToString();
-                        int price = Convert.ToInt16(ds.Tables[0].Rows[0]["price"]);
+                        Double price = Convert.ToDouble(ds.Tables[0].Rows[0]["price"]);
                         int quantity = Convert.ToInt16(Request.QueryString["quantity"]);
-                        int totalprice = price * quantity;
+                        Double totalprice = price * quantity;
                         dr["totalprice"] = totalprice;
 
                         dt.Rows.Add(dr);
@@ -121,16 +127,16 @@ namespace IWin
 
         }
 
-        public int grandtotal()
+        public Double grandtotal()
         {
             DataTable dt = new DataTable();
             dt = (DataTable)Session["buyitems"];
-            int nrow = dt.Rows.Count;
+            Double nrow = dt.Rows.Count;
             int i = 0;
-            int gtotal = 0;
+            Double gtotal = 0;
             while (i < nrow)
             {
-                gtotal = gtotal + Convert.ToInt32(dt.Rows[i]["totalprice"].ToString());
+                gtotal = gtotal + Convert.ToDouble(dt.Rows[i]["totalprice"].ToString());
 
                 i = i + 1;
             }
@@ -174,6 +180,11 @@ namespace IWin
 
             Session["buyitems"] = dt;
             Response.Redirect("AddToCart.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PlaceOrder.aspx");
         }
     }
 }

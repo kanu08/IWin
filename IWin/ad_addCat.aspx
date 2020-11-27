@@ -9,14 +9,17 @@
             <div class="adminform">
                   <div class="row">
                         <div class="col-sm-6" >
-                               <asp:Label ID="lblSName" runat="server" Text="Category name"></asp:Label>&nbsp&nbsp
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+                               <asp:Label ID="lblCatName" runat="server" Text="Category name"></asp:Label>&nbsp&nbsp
+                            <asp:TextBox ID="txtCatName" runat="server"></asp:TextBox><br />
+                               <asp:RequiredFieldValidator ID="rfv_txtCatName" runat="server" ErrorMessage="enter a category name" ControlToValidate="txtCatName" ForeColor="Red" ValidationGroup="vg_saveCat" Font-size="X-Small"></asp:RequiredFieldValidator>
+                               
+
                                <br /><br />
                          </div></div>
                       <div class="row">
                             <div class="col-sm-12">
                               <div class="center">
-                              <asp:Button ID="btn_saveCat" runat="server" Text="Save" OnClick="btn_saveCat_Click"/>&nbsp&nbsp
+                              <asp:Button ID="btn_saveCat" runat="server" Text="Save" OnClick="btn_saveCat_Click" ValidationGroup="vg_saveCat"/>&nbsp&nbsp
                               <asp:Button ID="btn_clearCat" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
                               </div>
                           </div>

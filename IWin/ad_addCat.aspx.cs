@@ -21,10 +21,10 @@ namespace IWin
             {
                 IWinBO.Category obj = new IWinBO.Category();
                 IWinBLL.iwinbl objBLL = new IWinBLL.iwinbl();
-                obj.CategoryName = TextBox1.Text;
+                obj.CategoryName = txtCatName.Text;
                 obj.OP = 1;
                 Result = objBLL.insertCategory(obj);
-                if (Result == 2)
+                if (Result == 1)
                 {
                     lblMessage.Text = "<span class='glyphicon glyphicon-ok'></span>" + "Category added successfully";
                     lblMessage.Visible = true;
@@ -39,7 +39,7 @@ namespace IWin
 
         protected void Clear()
         {
-            TextBox1.Text = "";
+            txtCatName.Text = "";
             //  lblMessage.Visible = true;
         }
     }

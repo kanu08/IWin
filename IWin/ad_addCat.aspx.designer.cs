@@ -15,22 +15,31 @@ namespace IWin
     {
 
         /// <summary>
-        /// lblSName control.
+        /// lblCatName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSName;
+        protected global::System.Web.UI.WebControls.Label lblCatName;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtCatName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtCatName;
+
+        /// <summary>
+        /// rfv_txtCatName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtCatName;
 
         /// <summary>
         /// btn_saveCat control.

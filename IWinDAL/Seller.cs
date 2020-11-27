@@ -48,6 +48,52 @@ namespace IWinDAL
             }
             return Result;
         }
+        public int FindDtlId(int detailId)
+        {
+            int res = 0;
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@SDtlId", detailId.ToString() } ,
+                    { "@OP", "2" }
+                };
+                //DataTable dt = new DataTable();
+
+                objcon.ExecuteSP("sp_user_Seller", out res, arraySell);
+                Result = res;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
+
+        public int regSeller(IWinBO.Seller obj)
+        {
+            int res = 0;
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@SDtlId", obj.SellerDetailId.ToString() } ,
+                    { "@SEmail", obj.SellerEmail } ,
+                    { "@SPass", obj.Password } ,
+                    { "@SActive", obj.Active.ToString() } ,
+                    { "@OP", obj.OP.ToString() }
+                };
+                objcon.ExecuteSP("sp_user_Seller", out res, arraySell);
+                Result = res;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
     }
 }
 

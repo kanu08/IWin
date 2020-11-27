@@ -7,31 +7,29 @@
         <h1>Add Brand</h1>
                       <br />
             <div class="adminform">
-                  <div class="row">
-                        <div class="col-sm-3" style="left: 27px; top: 1px; width: 742px;">
-                               <asp:Label ID="lblSName" runat="server" Text="Brand name"></asp:Label><br /><br />
-                               <br /><br />
+                   <div class="row">
+                      <div class="col-sm-3">
+                               <asp:Label ID="lblSName" runat="server" Text="Brand name"></asp:Label>
                          </div>
                         <div class="col-sm-3">
-                                <br />
-                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                <br />
-                                <br />
-                      <div class="row">&nbsp;<br />
-                          &nbsp;&nbsp;
-                          <asp:Button ID="Button1" runat="server" Text="Save" Width="90px" />
-                          <br />
-                          <br />
-                          <asp:Button ID="Button2" runat="server" Height="22px" Text="Clear" Width="109px" />
+                                <asp:TextBox ID="txtBrand" runat="server"></asp:TextBox>
+                           </div>
+                       </div>
+                      <div class="row">
                           <div class="col-sm-12" style="left: 25px; top: 5px">
                               <div class="center">
-                                  &nbsp&nbsp
+                                  <asp:Button ID="Button1" runat="server" Text="Save" Width="90px" OnClick="btn_SaveBrand_Click" />
+                              &nbsp&nbsp&nbsp
+                                  <asp:Button ID="Button2" runat="server" Text="Clear" />
                               </div>
                           </div>
+                          <div class="col-sm-12">
+                              <div class="center">
+                              <asp:Label class="lblsuccess" ID="lblmessage" runat="server" Text="" Visible="false">
+                              </asp:Label>
+                              </div>
                       </div>
-                                <br />
-                        </div>
-                     </div>
+                      </div>
                 </div>
         </div>
         </div>

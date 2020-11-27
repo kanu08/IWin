@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="us_DealsDay.aspx.cs" Inherits="IWin.us_DealsDay" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-  <div>
+<%--  <div>
        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="#000099" Text="IWIN"></asp:Label>
-  </div>
+  </div>--%>
         <asp:Label ID="Label1" runat="server" Text="DEALS OF THE DAY" Font-Bold="True" Font-Italic="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" EnableTheming="True" ForeColor="#990000"></asp:Label>
            
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">

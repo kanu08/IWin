@@ -11,7 +11,6 @@
                         <div class="col-sm-6">
                                <asp:Label ID="lblSCatName" runat="server" Text="Product Name"></asp:Label>&nbsp&nbsp
                                <asp:TextBox ID="txtSCat" runat="server"></asp:TextBox>                             
-                            
                          </div>
                        <div class="col-sm-6">
                                <asp:Label ID="Label3" runat="server" Text="Price"></asp:Label>&nbsp&nbsp

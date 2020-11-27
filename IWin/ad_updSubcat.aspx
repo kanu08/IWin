@@ -41,7 +41,7 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>  
         <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse"><tr>
-            <td style="width: 100px">SubCategory Name:</td>
+            <td style="width: 100px"><asp:Label ID="su" runat="server" Text="SubCategory Name:" ForeColor="White"></asp:Label></td>
              <td style="width: 100px">              
                 <asp:TextBox ID="txtSubCat" runat="server" Width="140" />
             </td>

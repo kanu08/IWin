@@ -14,6 +14,10 @@ namespace IWinBO
         private int sellerProvince;
         private int sellerPin;
         private string sellerContact;
+        private int sellerDetailId;
+        private string sellerEmail;
+        private string password;
+        private bool active;
         private int oP;
 
         public string SellerName { get => sellerName; set => sellerName = value; }
@@ -23,5 +27,9 @@ namespace IWinBO
         public int SellerProvince { get => sellerProvince; set => sellerProvince = value; }
         public int SellerPin { get => sellerPin; set => sellerPin = value; }
         public int OP { get => oP; set => oP = value; }
+        public int SellerDetailId { get => sellerDetailId; set => sellerDetailId = value; }
+        public string SellerEmail { get => sellerEmail; set => sellerEmail = value; }
+        public string Password { get => password; set => password = value; }
+        public bool Active { get => active; set => active = value; }
     }
 }

@@ -11,18 +11,20 @@
                         <div class="col-sm-6">
                                <asp:Label ID="lblSCatName" runat="server" Text="SubCategory name"></asp:Label>&nbsp&nbsp
                                <asp:TextBox ID="txtSCat" runat="server"></asp:TextBox><br />
-                               <br /><br />
+                               <asp:RequiredFieldValidator ID="rfv_txtSCat" runat="server" ErrorMessage="please fill subcategory name" Forecolor="Red" Font-Size="X-Small" ControlToValidate="txtSCat" ValidationGroup="vg_saveSubCat"></asp:RequiredFieldValidator>
+                               <br />
                             
                          </div> <div class="col-sm-6">
                               <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             <asp:DropDownList ID="ddlCategory" runat="server" >
                               </asp:DropDownList><br />
-                               <br /><br />
+                             <asp:RequiredFieldValidator ID="rfv_ddlCategory" runat="server" ErrorMessage="category is mandatory" Forecolor="Red" Font-Size="X-Small" ControlToValidate="ddlCategory" InitialValue="0" ValidationGroup="vg_saveSubCat"></asp:RequiredFieldValidator><br />
+                               <br />
                          </div></div>
                       <div class="row">
                             <div class="col-sm-12">
                               <div class="center">
-                              <asp:Button ID="btn_saveSubCat" runat="server" Text="Save" OnClick="btn_saveSubCat_Click"/>&nbsp&nbsp
+                              <asp:Button ID="btn_saveSubCat" runat="server" Text="Save" OnClick="btn_saveSubCat_Click" ValidationGroup="vg_saveSubCat"/>&nbsp&nbsp
                               <asp:Button ID="btn_clearCat" runat="server" Text="Clear" OnClientClick="reset();" CausesValidation=False/>
                               </div>
                           </div>
