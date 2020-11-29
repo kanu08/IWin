@@ -43,24 +43,8 @@
         <asp:TextBox ID="txtPriceEdit" runat="server" Text='<%#Eval("Price")%>'></asp:TextBox>
     </EditItemTemplate>
     </asp:TemplateField>
-    <asp:TemplateField HeaderText="Edit" ItemStyle-HorizontalAlign="Center">
-    <ItemTemplate>
-        <asp:Button ID="imgEdit" runat="server" text="Edit" CommandName="Edit" CausesValidation="false"/>
-    </ItemTemplate>
-    <EditItemTemplate>
-    <asp:LinkButton ID="lnkUpdate" runat="server" Text="Update" CommandName="Update" CausesValidation="false"></asp:LinkButton>
-    <asp:LinkButton ID="lnkCancel" runat="server" Text="Cancel" CommandName="Cancel" CausesValidation="false"></asp:LinkButton>
-    </EditItemTemplate>
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Delete" ItemStyle-HorizontalAlign="Center">
-    <ItemTemplate>
-        <asp:Button ID="imgDelete" runat="server" text="Delete" CommandName="Delete" CausesValidation="false" onclientclick="return confirm('Are you sure you want to delete?')" />
-    </ItemTemplate>
-    <EditItemTemplate>       
-    </EditItemTemplate>
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-    </asp:TemplateField>
+    
+
     </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
