@@ -31,6 +31,13 @@ namespace IWin
                 {
                     loggedAdmin.Visible = true;
                 }
+                else if (r == 3)
+                {
+                    loggedSell.Visible = true;
+                    int Si = IWinBLL.blUtil.getSelId(Session["user"].ToString());
+                    Session["Si"] = Si;
+                }
+                
             }
             
             // System.Threading.Thread.Sleep(3000);

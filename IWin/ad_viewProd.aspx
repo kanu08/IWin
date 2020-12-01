@@ -22,13 +22,14 @@
        <br />
         <br />
      <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="product_id" OnRowCancelingEdit="GridView2_RowCancelingEdit" 
-         OnRowDeleting="GridView2_RowDeleting" OnRowEditing="GridView2_RowEditing" OnRowUpdating="GridView2_RowUpdating" OnRowDataBound="GridView2_RowDataBound" 
+         OnRowDeleting="GridView2_RowDeleting" OnRowEditing="GridView2_RowEditing" OnRowUpdating="GridView2_RowUpdating" 
+         OnRowDataBound="GridView2_RowDataBound" OnRowCommand="GridView2_RowCommand" 
          BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" 
          BorderWidth="1px" CellPadding="3" CellSpacing="2" Width="100%" >  
                     <Columns>  
                         <asp:BoundField DataField="product_id" Visible="false" />  
                         <asp:BoundField DataField="Name" HeaderText="Product Name" />  
-                         <asp:BoundField DataField="price" HeaderText="Product Price"/> 
+                        <%-- <asp:BoundField DataField="price" HeaderText="Product Price"/> --%>
                        <asp:BoundField DataField="Brand_Id" Visible="false" /> 
                          <asp:TemplateField HeaderText="Brand Name">
                             <ItemTemplate>
@@ -57,6 +58,7 @@
 <%--                    <asp:BoundField DataField="category_id" HeaderText="category_ID" />  --%>                      
                         <asp:CommandField ShowEditButton="true" />  
                         <asp:CommandField ShowDeleteButton="true" /> 
+                        <asp:buttonfield buttontype="Button" commandname="SetMQU" headertext="MQU" text="SET MQU" />
                        
                     </Columns>  
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
@@ -72,13 +74,13 @@
         <table BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" CellPadding="1" CellSpacing="2" Width="100%" >
             <tr>
             <td style="width: 80px"><asp:TextBox ID="txtSCat" runat="server"></asp:TextBox></td>
-             <td style="width: 80px">              
+             <%--<td style="width: 80px">              
                 <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
-            </td>
-           <%-- <td style="width: 100px">              
+            </td>--%>
+           <td style="width: 100px">              
                 <asp:DropDownList ID="ddlCategory" runat="server" >
                               </asp:DropDownList>
-            </td>--%>
+            </td>
             <td style="width: 100px">              
                <asp:DropDownList ID="ddlBrand" runat="server" >
                               </asp:DropDownList>

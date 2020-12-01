@@ -110,6 +110,7 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="ad_MgBuySell.aspx" />
     <Content Include="ad_MgCat.aspx" />
+    <Content Include="ad_SetMQU.aspx" />
     <Content Include="ad_viewProd.aspx" />
     <Content Include="email.aspx" />
     <Content Include="images\addtocart.jpg" />
@@ -124,6 +125,8 @@
     <Content Include="images\pic5.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="ad_updCat.aspx" />
+    <Content Include="SellMenu.ascx" />
+    <Content Include="se_MgInventory.aspx" />
     <Content Include="se_register.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
@@ -309,6 +312,13 @@
     <Compile Include="ad_Reports.aspx.designer.cs">
       <DependentUpon>ad_Reports.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ad_SetMQU.aspx.cs">
+      <DependentUpon>ad_SetMQU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad_SetMQU.aspx.designer.cs">
+      <DependentUpon>ad_SetMQU.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ad_updBrand.aspx.cs">
       <DependentUpon>ad_updBrand.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -365,6 +375,20 @@
     </Compile>
     <Compile Include="ad_updCat.aspx.designer.cs">
       <DependentUpon>ad_updCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellMenu.ascx.cs">
+      <DependentUpon>SellMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellMenu.ascx.designer.cs">
+      <DependentUpon>SellMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="se_MgInventory.aspx.cs">
+      <DependentUpon>se_MgInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_MgInventory.aspx.designer.cs">
+      <DependentUpon>se_MgInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="se_register.aspx.cs">
       <DependentUpon>se_register.aspx</DependentUpon>

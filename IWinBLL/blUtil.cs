@@ -92,7 +92,20 @@ namespace IWinBLL
             return reEmail;
         }
 
+        public static int getSelId(string em)
+        {
+            int sid = 0;
+            try
+            {
+                IWinDAL.dbUtil d1 = new IWinDAL.dbUtil();
+                d1.ExecuteSPsid(out sid, em);
+            }
+            catch
+            {
 
-        
+            }
+            return sid;
+        }
+
     }
 }

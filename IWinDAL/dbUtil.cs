@@ -256,9 +256,41 @@ namespace IWinDAL
                     command.Connection = con;
                     SqlDataReader reader = command.ExecuteReader();
                     reader.Read();
-                    result = Convert.ToInt32(reader["RoleId"]);
+                    result = Convert.ToInt32(reader["Role"]);
                     con.Close();
                     role = result;
+                }
+            }
+        }
+
+        public void ExecuteSPsid([Optional] out int sid, [Optional] string em)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    con.Open();
+                    command.CommandType = CommandType.StoredProcedure;
+                    int result = 0;
+                    command.CommandText = "sp_user_Seller";
+                    command.CommandTimeout = 300;
+                    try
+                    {
+                        command.Parameters.Add(new SqlParameter("@SEmail", em));
+                        command.Parameters.Add(new SqlParameter("@OP", 4));
+                    }
+                    catch (Exception ex)
+                    {
+                        //ErrHandler.WriteError(ex.ToString());
+                        throw ex;
+                    }
+                    command.Connection = con;
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();
+                    result = Convert.ToInt32(reader["Id"]);
+                    con.Close();
+                    sid = result;
                 }
             }
         }
@@ -415,6 +447,9 @@ namespace IWinDAL
                     break;
                 case "ddlBrand":
                     n = 5;
+                    break;
+                case "ddlUOM":
+                    n = 6;
                     break;
                 default:
                     n = 0;

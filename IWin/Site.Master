@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IWin.SiteMaster" %>
 <%@ Register TagPrefix="UC" TagName="userMenu" Src="UserMenu.ascx" %>
 <%@ Register TagPrefix="UC1" TagName="adminMenu" Src="AdminMenu.ascx" %>
+<%@ Register TagPrefix="UC2" TagName="sellMenu" Src="SellMenu.ascx" %>
 
 <!DOCTYPE html>
 
@@ -59,6 +60,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
         <div id="loggedUser" runat="server" visible="false" ><UC:userMenu ID="user1" runat="server"></UC:userMenu></div>
+        <div id="loggedSell" runat="server" visible="false" ><UC2:sellMenu ID="user3" runat="server"></UC2:sellMenu></div>
         <div id="loggedAdmin" runat="server" visible="false"><UC1:adminMenu ID="user2" runat="server"></UC1:adminMenu></div>
                     <div id="withoutLogin" class="right-nav" runat="server"> 
                         <ul class="sign">
@@ -88,6 +90,9 @@
             <!-- footer -->
         </div>
  </form>
+       <!--Chatbot -->
+        <%--<script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiM2N2MxOGUiLCJ3ZWIiOnsiYm90SWQiOiI1ZmMzNWQxYTM1YjQ5MjAwOTdmMTBjZjUiLCJ0aGVtZSI6IiM2N2MxOGUiLCJsYWJlbCI6IlBpbmcifSwid2VsY29tZVRleHQiOiJMb29raW5nIGZvciBzb21ldGhpbmc/IiwicG9wdXBIZWlnaHQiOiI0MCUifQ==" async defer></script>
+ --%>
         <asp:Label ID="Label1" runat="server" Text="DEALS OF THE DAY" Font-Bold="True" Font-Italic="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" EnableTheming="True" ForeColor="#4b0000" BackColor="#90b432" Width="1530px" ></asp:Label>
            
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">

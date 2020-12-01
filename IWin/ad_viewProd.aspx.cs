@@ -41,6 +41,18 @@ namespace IWin
                 gvbind();
             }
 
+            protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+            {
+              if (e.CommandName == "SetMQU")
+               {
+
+                int index = Convert.ToInt32(e.CommandArgument); 
+                GridViewRow selectedRow = GridView2.Rows[index];
+                string prodId = GridView2.DataKeys[selectedRow.RowIndex].Value.ToString();
+                Response.Redirect("ad_SetMQU.aspx?id="+prodId);
+              }
+
+            }
             protected void GridView2_RowUpdating(object sender, GridViewUpdateEventArgs e)
             {
                 //string categoryid = (GridView2.Rows[e.RowIndex].FindControl("ddlCategory") as DropDownList).SelectedItem.Value;
@@ -133,7 +145,7 @@ namespace IWin
                     //sc.CatogoryId = Convert.ToInt32(ddlCategory.SelectedItem.Value);
                     sc.SubCategoryId = Convert.ToInt32(ddlSubCategory.SelectedItem.Value);
                     sc.Brandid = Convert.ToInt32(ddlBrand.SelectedItem.Value);
-                    sc.Price = Convert.ToDouble(txtPrice.Text);
+                    //sc.Price = Convert.ToDouble(txtPrice.Text);
                     sc.ProductImage = FileUpload1.FileName;
                     sc.OP = 1;  //represent an insert operation 
                     IWinBLL.Product objbu = new IWinBLL.Product();
@@ -142,7 +154,7 @@ namespace IWin
                     {
                         gvbind();
                         txtSCat.Text = "";
-                        txtPrice.Text = "";
+                        //txtPrice.Text = "";
                     }
                 }
                 catch
