@@ -451,6 +451,12 @@ namespace IWinDAL
                 case "ddlUOM":
                     n = 6;
                     break;
+                case "ddlFeedBack":
+                    n = 7;
+                    break;
+                case "ddlProducts":
+                    n = 8;
+                    break;
                 default:
                     n = 0;
                     break;

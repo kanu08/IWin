@@ -12,6 +12,7 @@ namespace IWin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             DataTable dt = new DataTable();
             dt = (DataTable)Session["buyitems"];
             if (dt != null)

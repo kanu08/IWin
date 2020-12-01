@@ -2,31 +2,45 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <div class="seller">
     <div class="container">
-   <div class="row clearfix">
-   <div class="find-box">
-       <br />
+   <div class="row clearfix"><br /><br /><br /><br /><br />
+<%--<div class="find-box">--%>
+       
        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1"
            AllowSorting="True"  BackColor="White" BorderColor="#DEDFDE" 
-           BorderStyle="None" BorderWidth="1px" CellPadding="4" 
-         ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="true"  >
+           BorderStyle="None" BorderWidth="1px" CellPadding="2" 
+         ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="True" Width="80%" style="margin-left:50px;" OnRowCommand="GridView1_RowCommand">
            <Columns>
-               <asp:CommandField ShowEditButton="True" />
-               <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-               <asp:BoundField DataField="SellId" HeaderText="SellId" SortExpression="SellId" />
-               <asp:BoundField DataField="mqu_id" HeaderText="mqu_id" SortExpression="mqu_id" />
-               <asp:BoundField DataField="sno" HeaderText="sno" SortExpression="sno" />
-               <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-               <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
-               <asp:BoundField DataField="Brand_Name" HeaderText="Brand_Name" SortExpression="Brand_Name" />
-               <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-               <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
-               <asp:BoundField DataField="UOM_Desc" HeaderText="UOM_Desc" SortExpression="UOM_Desc" />
+               <asp:TemplateField ShowHeader="False">
+                   <EditItemTemplate>
+                       <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Text="Update"></asp:LinkButton>
+                       &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                   </EditItemTemplate>
+                   <ItemTemplate>
+                       <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                   </ItemTemplate>
+               </asp:TemplateField>
+               <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" Visible="false"/>
+               <asp:BoundField DataField="SellId" HeaderText="SellId" SortExpression="SellId" Visible="false"/>
+              <%-- <asp:BoundField DataField="mqu_id" HeaderText="mqu_id" SortExpression="mqu_id" Visible="false"/>--%>
+               <asp:TemplateField HeaderText="mqu" SortExpression="mqu_id">
+            <ItemTemplate>
+                <asp:HiddenField ID="HiddenField1" runat="server" 
+                    Value='<%# Eval("mqu_id") %>' />
+            </ItemTemplate>
+        </asp:TemplateField>
+<%--               <asp:BoundField DataField="sno" HeaderText="sno" SortExpression="sno" ReadOnly="True"/>--%>
+               <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" ReadOnly="True"/>
+               <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" Visible="false"/>
+               <asp:BoundField DataField="Brand_Name" HeaderText="Brand_Name" SortExpression="Brand_Name" ReadOnly="True"/>
+               <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" ReadOnly="True"/>
+               <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" ReadOnly="True"/>
+               <asp:BoundField DataField="UOM_Desc" HeaderText="UOM_Desc" SortExpression="UOM_Desc" ReadOnly="True"/>
                <asp:TemplateField HeaderText="Your Price" SortExpression="sellPrice">
                    <EditItemTemplate>
                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("sellPrice") %>'></asp:TextBox>
                    </EditItemTemplate>
                    <ItemTemplate>
-                       <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("sellPrice") %>'></asp:TextBox>
+<%--                       <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("sellPrice") %>'></asp:TextBox>--%>
                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("sellPrice") %>'></asp:Label>
                    </ItemTemplate>
                </asp:TemplateField>
@@ -36,7 +50,12 @@
                    </EditItemTemplate>
                    <ItemTemplate>
                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("sellQty") %>'></asp:Label>
-                       <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("sellQty", "{0:N}") %>'></asp:TextBox>
+<%--                       <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("sellQty", "{0:N}") %>'></asp:TextBox>--%>
+                   </ItemTemplate>
+               </asp:TemplateField>
+               <asp:TemplateField HeaderText="Do you Sell?" >
+                   <ItemTemplate>
+                       <asp:CheckBox ID="CheckBox1" runat="server" Checked='<%# GetAv(Eval("sellPrice").ToString(),Eval("sellQty").ToString()) %>' Enabled="false"/>
                    </ItemTemplate>
                </asp:TemplateField>
            </Columns>
@@ -50,26 +69,25 @@
            <SortedDescendingCellStyle BackColor="#EAEAD3" />
            <SortedDescendingHeaderStyle BackColor="#575357" />
        </asp:GridView>
-       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand=" SELECT tbl_Seller_Inventory.Id, tbl_Seller_Inventory.SellId, tbl_Seller_Inventory.mqu_id,  v_allProductsWithMRP.sno, v_allProductsWithMRP.Name, v_allProductsWithMRP.Image, 
- v_allProductsWithMRP.Brand_Name, v_allProductsWithMRP.price, v_allProductsWithMRP.quantity, 
-                  v_allProductsWithMRP.UOM_Desc,tbl_Seller_Inventory.sellPrice, 
- tbl_Seller_Inventory.sellQty
-FROM     tbl_Seller_Inventory LEFT OUTER JOIN
-                  v_allProductsWithMRP ON v_allProductsWithMRP.sno = tbl_Seller_Inventory.mqu_id 
-WHERE  (tbl_Seller_Inventory.SellId = @Sid)" UpdateCommand="sp_Admin_AddCategory" UpdateCommandType="StoredProcedure">
+       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" 
+           SelectCommand="
+           SELECT * FROM (SELECT v_ProductListOrderBySeller.Id, v_ProductListOrderBySeller.SellId, v_ProductListOrderBySeller.mqu_id,  
+            v_ProductListOrderBySeller.Name,
+ v_ProductListOrderBySeller.Image, 
+ v_ProductListOrderBySeller.Brand_Name, v_ProductListOrderBySeller.price, v_ProductListOrderBySeller.quantity, 
+                  v_ProductListOrderBySeller.UOM_Desc,v_ProductListOrderBySeller.sellPrice, 
+ v_ProductListOrderBySeller.sellQty,
+           ROW_NUMBER() OVER(PARTITION BY mqu_id ORDER BY SellId DESC) rn
+FROM  v_ProductListOrderBySeller where (v_ProductListOrderBySeller.SellId=@Sid OR v_ProductListOrderBySeller.SellId IS NULL)) a where rn=1
+           ">
            <SelectParameters>
-               <asp:SessionParameter name="Sid" SessionField="Si" Type="Int16" />
+             <asp:SessionParameter name="Sid" SessionField="Si" Type="Int16" />
            </SelectParameters>
-           <UpdateParameters>
-               <asp:Parameter Name="In_CategoryName" Type="String" />
-               <asp:Parameter Name="IN_CategoryID" Type="Int32" />
-               <asp:Parameter Name="OP" Type="Int32" />
-           </UpdateParameters>
+         
        </asp:SqlDataSource>
        <br /><br />
-       <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click"/>
 
-
-
-       </div></div></div></div>
+       <asp:Label ID="Label4" runat="server" ForeColor="White"></asp:Label>
+       </div></div></div>
+ <%--  </div>--%>
 </asp:Content>

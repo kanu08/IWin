@@ -57,5 +57,20 @@ namespace IWinBLL
         }
 
 
+        public int updInventory(IWinBO.SellerInventory obj)
+        {
+            try
+            {
+                IWinDAL.Seller objDA = new IWinDAL.Seller();
+                return objDA.updInventory(obj);
+            }
+            catch (Exception ex)
+            {
+                //ErrHandler.WriteError(ex.ToString());
+                throw ex;
+            }
+        }
+
+
     }
 }

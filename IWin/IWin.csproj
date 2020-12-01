@@ -112,6 +112,9 @@
     <Content Include="ad_MgCat.aspx" />
     <Content Include="ad_SetMQU.aspx" />
     <Content Include="ad_viewProd.aspx" />
+    <Content Include="Content\rateit.css" />
+    <Content Include="Content\star-rating.css" />
+    <Content Include="Content\star.gif" />
     <Content Include="email.aspx" />
     <Content Include="images\addtocart.jpg" />
     <Content Include="images\admin.jpg" />
@@ -125,6 +128,7 @@
     <Content Include="images\pic5.jpg" />
     <Content Include="images\pick.jpg" />
     <Content Include="ad_updCat.aspx" />
+    <Content Include="Scripts\jquery.rateit.js" />
     <Content Include="SellMenu.ascx" />
     <Content Include="se_MgInventory.aspx" />
     <Content Include="se_register.aspx" />
@@ -221,6 +225,7 @@
     <Content Include="us_DealsDay.aspx" />
     <Content Include="us_emailVerify.aspx" />
     <Content Include="us_faq.aspx" />
+    <Content Include="us_Feedback.aspx" />
     <Content Include="us_login.aspx" />
     <Content Include="us_prodDetails.aspx" />
     <Content Include="us_profile.aspx" />
@@ -506,6 +511,13 @@
     </Compile>
     <Compile Include="us_faq.aspx.designer.cs">
       <DependentUpon>us_faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_Feedback.aspx.cs">
+      <DependentUpon>us_Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_Feedback.aspx.designer.cs">
+      <DependentUpon>us_Feedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_login.aspx.cs">
       <DependentUpon>us_login.aspx</DependentUpon>

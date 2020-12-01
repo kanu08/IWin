@@ -94,6 +94,30 @@ namespace IWinDAL
             }
             return Result;
         }
+
+        public int updInventory(IWinBO.SellerInventory obj)
+        {
+            int res = 0;
+            try
+            {
+                string[,] arraySell = new string[,]
+                {
+                    { "@SId", obj.SId } ,
+                    { "@mqu", obj.mqu },
+                    { "@SPrice", obj.SPrice },
+                    { "@SQty", obj.SQty },
+                    { "@OP", obj.OP }
+                };
+                objcon.ExecuteSP("sp_seller_InvUpdate", out res, arraySell);
+                Result = res;
+            }
+            catch (Exception e)
+            {
+                //ErrHandler.WriteError(e.ToString());
+                throw e;
+            }
+            return Result;
+        }
     }
 }
 

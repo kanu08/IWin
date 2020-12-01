@@ -45,6 +45,7 @@
     <Compile Include="blUtil.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Buyer.cs" />
+    <Compile Include="FeedBack.cs" />
     <Compile Include="iwinbl.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Seller.cs" />

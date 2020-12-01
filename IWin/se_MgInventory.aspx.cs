@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using Microsoft.Ajax.Utilities;
+using IWinBO;
+using IWinBLL;
+
 
 namespace IWin
 {
@@ -17,52 +21,115 @@ namespace IWin
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
+        //    foreach (GridViewRow row in GridView1.Rows)
+        //    {
+        //        DropDownList dlist = (row.Cells[2].FindControl("DropDownList1") as DropDownList);
+        //        int rollno = Convert.ToInt32(row.Cells[0].Text);
+        //        updaterow(rollno, dlist.Text);
+        //    }
+        //    GridView1.DataBind();
+        //}
+
+        //protected void updaterow(decimal price,int qty, int mqu)
+        //{
+        //    String constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(constr))
+        //    {
+        //        using (SqlCommand command = new SqlCommand())
+        //        {
+        //            command.CommandType = CommandType.StoredProcedure;
+        //            int result = 0;
+        //            command.CommandText = "sp_user_Seller";
+        //            SqlConnection con = new SqlConnection(mycon);
+        //            con.Open();
+        //            SqlCommand cmd = new SqlCommand();
+        //            cmd.CommandText = updatedata;
+        //            cmd.Connection = con;
+        //            cmd.ExecuteNonQuery();
+        //            try
+        //            {
+        //                command.Parameters.Add(new SqlParameter("@SEmail", em));
+        //                command.Parameters.Add(new SqlParameter("@OP", 4));
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                //ErrHandler.WriteError(ex.ToString());
+        //                throw ex;
+        //            }
+        //            command.Connection = con;
+        //            SqlDataReader reader = command.ExecuteReader();
+        //            reader.Read();
+        //            result = Convert.ToInt32(reader["Id"]);
+        //            con.Close();
+        //            Label4.Text = "Data Has Been Updated";
+        //        }
+        //    }
+        //}
+
+        protected bool GetAv(string sellPrice,string sellQty )
         {
-            foreach (GridViewRow row in GridView1.Rows)
+            string s1 = sellPrice;
+            string s2 = sellQty;
+            if ((s1.Trim() == "") || (s2.Trim() == "") || s1 == null || s2 == null)
             {
-                DropDownList dlist = (row.Cells[2].FindControl("DropDownList1") as DropDownList);
-                int rollno = Convert.ToInt32(row.Cells[0].Text);
-                updaterow(rollno, dlist.Text);
-
-
-
+                return false;
             }
-            GridView1.DataBind();
+            else
+            {
+                return true;
+            }
         }
 
-        protected void updaterow(decimal price,int qty, int mqu)
+        //protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        //{
+           
+
+        //}
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            String constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            if (e.CommandName == "Update")
             {
-                using (SqlCommand command = new SqlCommand())
+                try
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    int result = 0;
-                    command.CommandText = "sp_user_Seller";
-                    SqlConnection con = new SqlConnection(mycon);
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = updatedata;
-                    cmd.Connection = con;
-                    cmd.ExecuteNonQuery();
-                    try
+                    int r;
+                    int ind = Convert.ToInt32(e.CommandArgument);
+                    //GridViewRow row = GridView1.Rows[Convert.ToInt32(e.CommandArgument)];
+                    //string eno;
+                    GridViewRow row = GridView1.Rows[ind];
+                    HiddenField eno2 = row.Cells[0].FindControl("HiddenField1") as HiddenField;
+                    string eno = GridView1.Rows[Convert.ToInt32(e.CommandArgument)].Cells[2].Text;
+                    TextBox tSPrice = (TextBox)row.FindControl("TextBox1");
+                    TextBox tSQty = (TextBox)row.FindControl("TextBox2");
+                    IWinBO.SellerInventory si1 = new IWinBO.SellerInventory();
+                    si1.OP = "1";
+                    si1.mqu = eno2.Value;
+                    si1.SId = Session["Si"].ToString();
+                    if (tSPrice.Text == "" || tSQty.Text == "")
                     {
-                        command.Parameters.Add(new SqlParameter("@SEmail", em));
-                        command.Parameters.Add(new SqlParameter("@OP", 4));
+                        si1.SPrice = "0";
+                        si1.SQty = "0";
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        //ErrHandler.WriteError(ex.ToString());
-                        throw ex;
+                        si1.SPrice = tSPrice.Text;
+                        si1.SQty = tSQty.Text;
                     }
-                    command.Connection = con;
-                    SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    result = Convert.ToInt32(reader["Id"]);
-                    con.Close();
-                    Label2.Text = "Data Has Been Updated";
+                    IWinBLL.Seller si2 = new IWinBLL.Seller();
+                    r = si2.updInventory(si1);
+                    if (r == 1)
+                    {
+                        Label4.Text = "DONE";
+                        Response.Redirect("se_MgInventory.aspx");
+                    }
+
+
+                }
+                catch
+                {
+
                 }
             }
         }
