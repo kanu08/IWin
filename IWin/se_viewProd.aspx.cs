@@ -36,7 +36,7 @@ namespace IWin
             }
             else if(e.CommandName == "viewDetail")
             {
-                Response.Redirect("us_prodDetails.aspx?id="+e.CommandArgument.ToString());
+                Response.Redirect("us_prodDetails.aspx?prod=" + e.CommandArgument.ToString());
             }
         }
 

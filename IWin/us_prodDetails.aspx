@@ -1,37 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="us_prodDetails.aspx.cs" Inherits="IWin.us_prodDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="us_prodDetails.aspx.cs" Inherits="IWin.us_prodDetails1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="seller">
+         <div class="seller">
     <div class="container">
-   <div class="row clearfix">
-   <div class="find-box"><br />
-                &nbsp;<asp:DataList ID="DataList1" runat="server" DataKeyField="product_id" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand" ForeColor="White">
+<%--    <div class="row clearfix"> <br />
+  <div class="find-box">--%>
+         <div style="margin-top: 70px;margin-left:20px;margin-right:20px;">
+       <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2"  ForeColor="White">
                 <ItemTemplate>
                     <br />
                     <table style="width:100%;">
-                        <tr>
-                            <td class="auto-style3">
+                      <tr>
+                            <td>
                                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large" Text='<%# Eval("Name") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style6">Product ID :
-                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("product_id") %>'></asp:Label>
+                            <td>Product of Canada. Farm fresh. </td>
+                            <td>
+                                <asp:Image ID="Image1" runat="server" MaxHeight="300px" ImageUrl='<%# "~/images/" + Eval("Image") %>' MaxWidth="300px" />
                             </td>
                         </tr>
-                        <tr>
-                            <td class="auto-style5">Price :
-                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("price") %>'></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style4">Description : Product of Canada. Farm fresh. </td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style2">
-                                <asp:Image ID="Image1" runat="server" Height="300px" ImageUrl='<%# "~/images/" + Eval("Image") %>' Width="300px" />
-                            </td>
-                        </tr>
-                    <div><asp:Button ID="Button1" class="" runat="server" CommandArgument='<%# Eval("product_id")%>' CommandName="addtocart" Height="30px"  Text="Buy Now" Width="100px" ForeColor="Black" />
+                    <div><%--<asp:Button ID="Button1" class="" runat="server" CommandArgument='<%# Eval("product_id")%>' CommandName="addtocart" Height="30px"  Text="Buy Now" Width="100px" ForeColor="Black" />--%>
                          </div>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         <div><asp:Button ID="Button2" class="" runat="server" Height="30px"  Text="Go Back" Width="100px" ForeColor="Black" PostBackUrl="~/se_viewProd.aspx" />
                          </div>  
@@ -41,9 +30,53 @@
         
         <p>
             &nbsp;</p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings: iwinConn %>" SelectCommand="SELECT * FROM [tbl_lookup_product] WHERE ([product_id] = @product_id)">
+ <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings: iwinConn %>" SelectCommand="SELECT product_id,Name,Image,Brand_Name FROM [v_allProducts] WHERE ([product_id] = @product_id)" >
             <SelectParameters>
-                <asp:QueryStringParameter Name="product_id" QueryStringField="id" Type="Int32" />
+                <asp:QueryStringParameter Name="product_id" QueryStringField="prod" Type="Int32" />
             </SelectParameters>
-        </asp:SqlDataSource></div></div></div></div>
+        </asp:SqlDataSource>
+       <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" ForeColor="White" OnItemCommand="DataList1_ItemCommand"  >
+           <ItemTemplate>
+
+               <table style="width:100%;border-color:white; border: 4px solid white">
+                      <tr>
+<%--       <td><asp:Label ID="mqu_idLabel" runat="server" Text='<%# Eval("mqu_id") %>' /></td>--%>
+                  <td>Sold By:&nbsp&nbsp</td>
+                  <td> <asp:Label ID="lblsellName" runat="server" Text='<%# Eval("SellerName") %>' />&nbsp&nbsp</td>
+                 <td>Package:&nbsp&nbsp</td>
+                 <td><asp:Label ID="lblqt" runat="server" Text='<%# Eval("quantity")%>' /><asp:Label ID="lblUom" runat="server" Text='<%# Eval("UOM_Desc")%>' /> &nbsp&nbsp</td>       
+                 <td rowspan="2" colspan="4" style="border-left:2px thin white;">Quantity&nbsp&nbsp
+                     <asp:DropDownList ID="ddlQty" runat="server" ForeColor="Black">
+                                    <asp:ListItem>1</asp:ListItem>
+                                    <asp:ListItem>2</asp:ListItem>
+                                    <asp:ListItem>3</asp:ListItem>
+                                    <asp:ListItem Value="4"></asp:ListItem>
+                                    <asp:ListItem>5</asp:ListItem>
+                     </asp:DropDownList>&nbsp&nbsp
+                     <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%#Eval("mqu_id")+","+ Eval("Id")%>' 
+                                    CommandName="addtocart" Height="25px" ImageUrl="~/images/addtocart.jpg" Width="50px" />&nbsp&nbsp&nbsp&nbsp
+
+                   </td>     
+                      </tr>
+                       <tr>
+                       <td>sellPrice:&nbsp&nbsp</td>
+                        <td><asp:Label ID="lblsellPrice" runat="server" Text='<%# Eval("sellPrice") %>' />&nbsp&nbsp</td>
+                        <td>Available Qty:&nbsp&nbsp</td>
+                        <td><asp:Label ID="lblsellQty" runat="server" Text='<%# Eval("sellQty") %>' />&nbsp&nbsp</td>
+                    </tr>
+              </table>
+           </ItemTemplate>
+       </asp:DataList>
+       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand="sp_ViewProdForUser" SelectCommandType="StoredProcedure">
+           <SelectParameters>
+               <asp:SessionParameter Name="em" SessionField="user" Type="String" />
+               <asp:QueryStringParameter Name="prodId" QueryStringField="prod" Type="Int32" />
+               <asp:Parameter DefaultValue="1" Name="OP" Type="Int32" />
+           </SelectParameters>
+       </asp:SqlDataSource>
+       <br />
+      
+
+       </div></div></div>
+
 </asp:Content>

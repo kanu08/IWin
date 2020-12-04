@@ -13,12 +13,5 @@ namespace IWinDAL
 {
     public class iwinDal
     {
-        //int Result = 0;
-        //DbconnUtil objcon = new DbconnUtil();
-        //DataSet dt = new DataSet();
-        //public int ins_Seller(iwinBll obj)
-        //{
-
-        //}
     }
 }

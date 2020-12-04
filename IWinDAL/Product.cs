@@ -33,9 +33,7 @@ namespace IWinDAL
                 string[,] arraySell = new string[,]
                 {
                     { "@In_ProductName", obj.ProductName } ,
-                     //{ "@IN_CategoryID",Convert.ToString(obj.CatogoryId) } ,
                      { "@IN_SubCategoryID",Convert.ToString(obj.SubCategoryId) } ,
-                    { "@IN_Price",Convert.ToString(obj.Price) } ,
                     {"@IN_Image",obj.ProductImage },
                     {"@IN_BrandId",Convert.ToString(obj.Brandid) },
                      { "@OP", Convert.ToString(obj.OP) }
@@ -88,9 +86,7 @@ namespace IWinDAL
                 string[,] arraySell = new string[,]
                 {
                     { "@In_ProductName", obj.ProductName } ,
-                     { "@IN_CategoryID",Convert.ToString(obj.CatogoryId) } ,
                      { "@IN_SubCategoryID",Convert.ToString(obj.SubCategoryId) } ,
-                    { "@IN_Price",Convert.ToString(obj.Price) } ,
                      { "@IN_ProductId",Convert.ToString(obj.ProductId) } ,
                      {"@IN_BrandId" , Convert.ToString(obj.Brandid) },
                      { "@OP", "3" }
@@ -187,7 +183,7 @@ namespace IWinDAL
                         bList.Value = dt2;
                         command.Parameters.Add(bList);
                         command.Parameters.AddWithValue("@OP","1");
-                        command.Parameters.AddWithValue("@price", obj.Price.ToString());
+                        //command.Parameters.AddWithValue("@price", obj.Price.ToString());
 
 
                     }
@@ -203,7 +199,10 @@ namespace IWinDAL
                 }
             }
         }
-
+        /// <summary>
+        /// This method is used to get products near expiry date
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetNearExpiryProducts()
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["iwinConn"].ToString());

@@ -27,7 +27,11 @@ namespace IWinBLL
                 throw ex;
             }
         }
-    
+    /// <summary>
+    /// This method is used to return details of the seller
+    /// </summary>
+    /// <param name="detailId"></param>
+    /// <returns></returns>
         public int FindDtlId(int detailId)
         {
             try
@@ -41,7 +45,11 @@ namespace IWinBLL
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// this method is used to implement logic to return login status of seller
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int regSeller(IWinBO.Seller obj)
         {
             try
@@ -56,7 +64,11 @@ namespace IWinBLL
             }
         }
 
-
+        /// <summary>
+        /// This method is used to implement logic to update inventory
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int updInventory(IWinBO.SellerInventory obj)
         {
             try

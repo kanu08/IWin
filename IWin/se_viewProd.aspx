@@ -42,17 +42,17 @@
                                     CommandName="viewDetail"/>
                             </td>
                         </tr>
-                       <%-- <tr>
-                            <td>
-                                <asp:Image ID="Imag" runat="server" Height="200px" Width="200px" OnClientClick="ProductDetail()" />
-                            </td>
-                        </tr>--%>
                         <tr>
+                            <td>
+                               <asp:Label ID="Label1" runat="server" Text='<%# Eval("Brand_Name") %>'></asp:Label>
+                            </td>
+                        </tr>
+                       <%-- <tr>
                             <td>Price
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("price") %>'></asp:Label>
                             </td>
-                        </tr>
-                        <tr>
+                        </tr>--%>
+                       <%-- <tr>
                             <td>Quantity
                                 <asp:DropDownList ID="DropDownList1" runat="server">
                                     <asp:ListItem>1</asp:ListItem>
@@ -62,12 +62,13 @@
                                     <asp:ListItem>5</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
-                        </tr>
+                        </tr>--%>
                         <tr>
-                            <td>
-                                <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("product_id")%>' 
+                     <%--       <td>
+                               <asp:ImageButton ID="ImageButton1" runat="server" CommandArgument='<%# Eval("product_id")%>' 
                                     CommandName="addtocart" Height="50px" ImageUrl="~/images/addtocart.jpg" Width="100px" />
-                            </td>
+                               
+                            </td>--%>
                         </tr>
                     </table>
                     <br />
@@ -76,7 +77,7 @@
             </asp:DataList>
             <br />
             <br />
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand="SELECT * FROM [tbl_lookup_product]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand="SELECT product_id,Name,Image,Brand_Name FROM [v_allProducts]"></asp:SqlDataSource>
             <br />
         </div>
        </div></div><%--</div></div>--%>

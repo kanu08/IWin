@@ -111,6 +111,7 @@
     <Content Include="ad_MgBuySell.aspx" />
     <Content Include="ad_MgCat.aspx" />
     <Content Include="ad_SetMQU.aspx" />
+    <Content Include="ad_suggestSeller.aspx" />
     <Content Include="ad_viewProd.aspx" />
     <Content Include="Content\rateit.css" />
     <Content Include="Content\star-rating.css" />
@@ -132,6 +133,8 @@
     <Content Include="SellMenu.ascx" />
     <Content Include="se_MgInventory.aspx" />
     <Content Include="se_register.aspx" />
+    <Content Include="se_Reports.aspx" />
+    <Content Include="se_reqChange.aspx" />
     <Content Include="UserHome.aspx" />
     <Content Include="ad_addBrand.aspx" />
     <Content Include="ad_addCat.aspx" />
@@ -228,12 +231,17 @@
     <Content Include="us_Feedback.aspx" />
     <Content Include="us_login.aspx" />
     <Content Include="us_prodDetails.aspx" />
+    <Content Include="us_prodReq.aspx" />
     <Content Include="us_profile.aspx" />
     <Content Include="us_registeration.aspx" />
+    <Content Include="us_reqToSell.aspx" />
     <Content Include="us_rescuedProd.aspx" />
+    <Content Include="us_subscribe.aspx" />
     <Content Include="us_viewAdd.aspx" />
     <Content Include="us_viewCart.aspx" />
     <Content Include="us_viewProd.aspx" />
+    <Content Include="us_viewSubProd.aspx" />
+    <Content Include="us_viewSubs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -324,6 +332,13 @@
     <Compile Include="ad_SetMQU.aspx.designer.cs">
       <DependentUpon>ad_SetMQU.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ad_suggestSeller.aspx.cs">
+      <DependentUpon>ad_suggestSeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ad_suggestSeller.aspx.designer.cs">
+      <DependentUpon>ad_suggestSeller.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ad_updBrand.aspx.cs">
       <DependentUpon>ad_updBrand.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,6 +416,20 @@
     </Compile>
     <Compile Include="se_register.aspx.designer.cs">
       <DependentUpon>se_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="se_Reports.aspx.cs">
+      <DependentUpon>se_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_Reports.aspx.designer.cs">
+      <DependentUpon>se_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="se_reqChange.aspx.cs">
+      <DependentUpon>se_reqChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="se_reqChange.aspx.designer.cs">
+      <DependentUpon>se_reqChange.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserHome.aspx.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
@@ -533,6 +562,13 @@
     <Compile Include="us_prodDetails.aspx.designer.cs">
       <DependentUpon>us_prodDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="us_prodReq.aspx.cs">
+      <DependentUpon>us_prodReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_prodReq.aspx.designer.cs">
+      <DependentUpon>us_prodReq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="us_profile.aspx.cs">
       <DependentUpon>us_profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -547,12 +583,26 @@
     <Compile Include="us_registeration.aspx.designer.cs">
       <DependentUpon>us_registeration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="us_reqToSell.aspx.cs">
+      <DependentUpon>us_reqToSell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_reqToSell.aspx.designer.cs">
+      <DependentUpon>us_reqToSell.aspx</DependentUpon>
+    </Compile>
     <Compile Include="us_rescuedProd.aspx.cs">
       <DependentUpon>us_rescuedProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="us_rescuedProd.aspx.designer.cs">
       <DependentUpon>us_rescuedProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_subscribe.aspx.cs">
+      <DependentUpon>us_subscribe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_subscribe.aspx.designer.cs">
+      <DependentUpon>us_subscribe.aspx</DependentUpon>
     </Compile>
     <Compile Include="us_viewAdd.aspx.cs">
       <DependentUpon>us_viewAdd.aspx</DependentUpon>
@@ -574,6 +624,20 @@
     </Compile>
     <Compile Include="us_viewProd.aspx.designer.cs">
       <DependentUpon>us_viewProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_viewSubProd.aspx.cs">
+      <DependentUpon>us_viewSubProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_viewSubProd.aspx.designer.cs">
+      <DependentUpon>us_viewSubProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="us_viewSubs.aspx.cs">
+      <DependentUpon>us_viewSubs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="us_viewSubs.aspx.designer.cs">
+      <DependentUpon>us_viewSubs.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

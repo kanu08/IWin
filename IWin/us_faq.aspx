@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="us_faq.aspx.cs" Inherits="IWin.us_faq" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <div class="seller">
+    <div class="seller">
    <div class="container">
    <div class="row clearfix">
-   <div class="find-box"><br />
+   <div class="find-box">
+       <asp:Button ID="btnfeed" runat="server" Text="Click to give Feedback" Height="40px" Width="200px" PostBackUrl="~/us_Feedback.aspx" />&nbsp&nbsp&nbsp
+       <asp:Button ID="btnIwant" runat="server" Text="I want" Height="40px" Width="200px" PostBackUrl="~/us_prodReq.aspx" />
+       <br />
         <h1>FAQ</h1>
                       <br />
     <div>

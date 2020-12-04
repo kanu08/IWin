@@ -262,7 +262,11 @@ namespace IWinDAL
                 }
             }
         }
-
+        /// <summary>
+        /// execute stored procedure to read id
+        /// </summary>
+        /// <param name="sid"></param>
+        /// <param name="em"></param>
         public void ExecuteSPsid([Optional] out int sid, [Optional] string em)
         {
             string constr = ConfigurationManager.ConnectionStrings["iwinConn"].ConnectionString;
@@ -464,7 +468,8 @@ namespace IWinDAL
             return n;
         }
         /// <summary>
-        /// This method is specifically to convert a list of objects or value types to Datatable
+        /// This method is specifically to convert a list of objects or value types to Datatable 
+        /// so that it can be used to pass as user-defined data-types
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="data"></param>

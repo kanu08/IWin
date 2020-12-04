@@ -9,6 +9,7 @@
  <li><a runat="server" href="~/" style="color:white;padding-bottom:8px;">View/Edit Buyer</a></li>
  <li><a runat="server" href="~/ad_addSeller.aspx" style="color:white;padding-bottom:8px;">Add Seller</a></li>
  <li><a runat="server" href="~/" style="color:white;padding-bottom:8px;">View/Edit Seller</a></li>
+<li><a runat="server" href="~/ad_suggestSeller" style="color:white;padding-bottom:8px;">Suggest/Wish a Seller</a></li>
  </ul></div>
     <div class="container">
    <div class="row clearfix">

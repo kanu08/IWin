@@ -69,6 +69,10 @@ namespace IWinBLL
             IWinDAL.Product objDAL = new IWinDAL.Product();
             return objDAL.Filter(obj);
         }
+        /// <summary>
+        /// This method is used to implement logic to get products near expiry
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetNearExpiryProducts()
         {
             IWinDAL.Product objDAL = new IWinDAL.Product();

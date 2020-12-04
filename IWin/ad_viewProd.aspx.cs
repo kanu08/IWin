@@ -65,7 +65,7 @@ namespace IWin
                 GridView2.EditIndex = -1;
                 IWinBO.Product obj = new IWinBO.Product();
                 obj.ProductName = textadd.Text;
-                obj.Price = Convert.ToDouble(textp.Text);
+               // obj.Price = Convert.ToDouble(textp.Text);
                 //obj.CatogoryId = Convert.ToInt32(categoryid);
                 obj.SubCategoryId = Convert.ToInt32(subcategoryid);
                 obj.ProductId = userid;
@@ -192,20 +192,20 @@ namespace IWin
                 {
                     DataTable dtt = new DataTable();
                     IWinBO.Product obj = new IWinBO.Product();
-                    if(txtMaxPrice.Text.Trim()=="" && BrandList.SelectedIndex==-1 )
+                    if(BrandList.SelectedIndex==-1 )
                     {
                         Response.Redirect("ad_viewProd.aspx");
                     }
                     
-                    if (txtMaxPrice.Text.Trim() != "")
-                    {
-                        obj.Price = Convert.ToDouble(txtMaxPrice.Text);
+                    //if (txtMaxPrice.Text.Trim() != "")
+                    //{
+                    //    obj.Price = Convert.ToDouble(txtMaxPrice.Text);
 
-                    }
-                    else
-                    {
-                        obj.Price = 0;
-                    }
+                    //}
+                    //else
+                    //{
+                    //    obj.Price = 0;
+                    //}
                     List<ListItem> tempList = BrandList.Items.Cast<ListItem>().Where(li => li.Selected).ToList();
                     List<int> brandIdItems = new List<int>();
                     foreach (ListItem l in tempList)

@@ -48,6 +48,11 @@ namespace IWinDAL
             }
             return Result;
         }
+        /// <summary>
+        /// This method is used to fetch seller details from the database
+        /// </summary>
+        /// <param name="detailId"></param>
+        /// <returns></returns>
         public int FindDtlId(int detailId)
         {
             int res = 0;
@@ -70,7 +75,11 @@ namespace IWinDAL
             }
             return Result;
         }
-
+        /// <summary>
+        /// This method is used to save login details of seller
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int regSeller(IWinBO.Seller obj)
         {
             int res = 0;
@@ -94,7 +103,11 @@ namespace IWinDAL
             }
             return Result;
         }
-
+        /// <summary>
+        /// This method is used to update inventory of the seller in the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int updInventory(IWinBO.SellerInventory obj)
         {
             int res = 0;

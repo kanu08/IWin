@@ -77,8 +77,8 @@
                         </div>
                     </div>
                         <div style="text-align: right;padding-right: 20px;padding-left:1300px" >
-                        <a runat="server" href="~/Cart"><i class="fa" style="font-size:35px">&#xf07a;</i>
-                              <span class='badge badge-warning' id='lblCartCount'>0</span>
+                        <a runat="server" href="~/AddToCart"><i class="fa" style="font-size:35px">&#xf07a;</i>
+                              <%--<span class='badge badge-warning' id='lblCartCount'>0</span>--%>
                         </a>
                     </div>
                 </div>
@@ -91,9 +91,8 @@
         </div>
  </form>
        <!--Chatbot -->
-        <%--<script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiM2N2MxOGUiLCJ3ZWIiOnsiYm90SWQiOiI1ZmMzNWQxYTM1YjQ5MjAwOTdmMTBjZjUiLCJ0aGVtZSI6IiM2N2MxOGUiLCJsYWJlbCI6IlBpbmcifSwid2VsY29tZVRleHQiOiJMb29raW5nIGZvciBzb21ldGhpbmc/IiwicG9wdXBIZWlnaHQiOiI0MCUifQ==" async defer></script>
- --%>
-        <asp:Label ID="Label1" runat="server" Text="DEALS OF THE DAY" Font-Bold="True" Font-Italic="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" EnableTheming="True" ForeColor="#4b0000" BackColor="#90b432" Width="1530px" ></asp:Label>
+<script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiM2N2MxOGUiLCJ3ZWIiOnsiYm90SWQiOiI1ZmMzNWQxYTM1YjQ5MjAwOTdmMTBjZjUiLCJ0aGVtZSI6IiM2N2MxOGUiLCJsYWJlbCI6IlBpbmcifSwid2VsY29tZVRleHQiOiJMb29raW5nIGZvciBzb21ldGhpbmc/IiwicG9wdXBIZWlnaHQiOiI4MCUifQ==" async defer></script>
+       <asp:Label ID="Label1" runat="server" Text="DEALS OF THE DAY" Font-Bold="True" Font-Italic="False" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" EnableTheming="True" ForeColor="#4b0000" BackColor="#90b432" Width="1530px" ></asp:Label>
            
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
   <!-- Indicators -->

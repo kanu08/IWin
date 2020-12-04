@@ -9,9 +9,7 @@
                               </asp:DropDownList>
             </td>--%>
         <asp:Label runat="server" Font-Size="Medium" ForeColor="White">Search:</asp:Label>&nbsp&nbsp&nbsp&nbsp
-       <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
-       <asp:Label runat="server" Font-Size="Medium" ForeColor="White">Max Price:</asp:Label>&nbsp&nbsp&nbsp&nbsp
-       <asp:TextBox ID="txtMaxPrice" runat="server" AutoPostBack="true"></asp:TextBox><br />
+       <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="true" OnTextChanged="txtSearch_TextChanged"></asp:TextBox><br />
        <asp:Label runat="server" Font-Size="Medium" ForeColor="White">Brand:</asp:Label>&nbsp&nbsp<asp:CheckBoxList ID="BrandList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Brand_Name" DataValueField="Brand_Id" Font-Size="Medium" ForeColor="White" style="color:white;">
        </asp:CheckBoxList>
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:iwinConn %>" SelectCommand="SELECT [Brand_Id],[Brand_Name] FROM [tbl_lookup_brand]"></asp:SqlDataSource>

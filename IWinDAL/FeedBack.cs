@@ -11,7 +11,11 @@ namespace IWinDAL
         int Result = 0;
         dbUtil objcon = new dbUtil();
         DataSet dt = new DataSet();
-
+        /// <summary>
+        /// to insert feedback into the database
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int ins_FeedBack(IWinBO.FeedBack obj)
         {
             int res = 0;

@@ -91,7 +91,11 @@ namespace IWinBLL
             }
             return reEmail;
         }
-
+        /// <summary>
+        ///This method is used to return ID for the seller
+        /// </summary>
+        /// <param name="em"></param>
+        /// <returns></returns>
         public static int getSelId(string em)
         {
             int sid = 0;

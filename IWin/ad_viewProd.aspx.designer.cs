@@ -24,15 +24,6 @@ namespace IWin
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
 
         /// <summary>
-        /// txtMaxPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaxPrice;
-
-        /// <summary>
         /// BrandList control.
         /// </summary>
         /// <remarks>
